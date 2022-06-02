@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { IconLink } from "./IconLink";
 import { SearchBarLink } from "./SearchBarLink";
 
 import { TextLink } from "./TextLink";
@@ -20,6 +21,20 @@ export const Navbar = (props) => {
             Contact
           </TextLink>
           <SearchBarLink />
+          <IconLink
+            iconSrc="sign_in.svg"
+            iconAlt="sign in icon"
+            destination="https://www.hostworkspromo.com/signin.htm"
+          >
+            Sign In
+          </IconLink>
+          <IconLink
+            iconSrc="cart.svg"
+            iconAlt="cart icon"
+            destination="https://www.hostworkspromo.com/cart.htm"
+          >
+            Cart
+          </IconLink>
         </LinkContainer>
       </Bar>
     </Container>
@@ -30,7 +45,7 @@ const Container = styled.div`
   position: fixed;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
 `;
 
@@ -52,6 +67,6 @@ const LinkContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 45%;
+  width: 100%;
   margin-top: -3px;
 `;
