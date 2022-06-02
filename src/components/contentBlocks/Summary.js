@@ -30,7 +30,7 @@ export const Summary = (props) => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: ${(props) =>
-    props.swap ? "22% 32% 10% 16% 20%" : "15% 30% 10% 30% 15%"};
+    props.swap ? "22% 32% 10% 16% 20%" : "10% 35% 7% 39% 9%"};
   grid-template-rows: 1fr;
   justify-content: space-between;
   align-items: center;
@@ -51,9 +51,15 @@ const DescriptionContainer = styled.div`
   align-self: stretch;
   justify-self: center;
   grid-row-start: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 const Text = styled.p`
   font-family: ${({ theme }) => theme.font};
   font-size: ${({ theme }) => theme.text.sm};
+  line-height: 28px;
+  margin-top: 20px;
 `;

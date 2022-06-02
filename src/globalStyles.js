@@ -1,5 +1,6 @@
 export const globalStyles = {
   color: "#FF5A5F",
+  backgroundColor: "#F5FAFA",
   font: "Poppins",
   text: {
     xs: "14px",

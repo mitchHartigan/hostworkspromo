@@ -34,4 +34,5 @@ export const ContentBlocks = (props) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.backgroundColor};
 `;
