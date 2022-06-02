@@ -30,7 +30,7 @@ export const Summary = (props) => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: ${(props) =>
-    props.swap ? "22% 32% 10% 16% 20%" : "10% 35% 7% 39% 9%"};
+    props.swap ? "11% 36% 10% 34% 9%" : "10% 35% 7% 39% 9%"};
   grid-template-rows: 1fr;
   justify-content: space-between;
   align-items: center;
