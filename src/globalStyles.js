@@ -6,5 +6,6 @@ export const globalStyles = {
     sm: "16px",
     md: "20px",
     lg: "22px",
+    xl: "36px",
   },
 };

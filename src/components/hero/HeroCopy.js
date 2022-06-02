@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Button } from "../Button";
+
 export const HeroCopy = (props) => {
+  function handleRedirect() {
+    const locationStr = "https://www.hostworkspromo.com/why-hostworks.htm";
+    window.location.href = locationStr;
+  }
+
   return (
     <Container>
       <TitleContainer>
         <Title src="full_name_logo.svg" alt="Full name logo." />
         <Subtitle>Elevate the guest experience.</Subtitle>
-        <Button>Find out how</Button>
+        <Button handleClick={handleRedirect}>Find out how</Button>
       </TitleContainer>
     </Container>
   );
@@ -40,15 +47,15 @@ const Subtitle = styled.h3`
   font-weight: 400;
 `;
 
-const Button = styled.button`
-  margin-top: 10px;
-  padding: 5px 20px 5px 20px;
-  background-color: white;
-  font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.text.md};
-  font-weight: 500;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-`;
+// const Button = styled.button`
+//   margin-top: 10px;
+//   padding: 5px 20px 5px 20px;
+//   background-color: white;
+//   font-family: ${({ theme }) => theme.font};
+//   font-size: ${({ theme }) => theme.text.md};
+//   font-weight: 500;
+//   border-radius: 10px;
+//   border: none;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   cursor: pointer;
+// `;
