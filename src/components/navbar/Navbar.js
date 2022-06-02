@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { SearchBarLink } from "./SearchBarLink";
 
 import { TextLink } from "./TextLink";
 
@@ -18,6 +19,7 @@ export const Navbar = (props) => {
           <TextLink destination="https://www.hostworkspromo.com/contact.htm">
             Contact
           </TextLink>
+          <SearchBarLink />
         </LinkContainer>
       </Bar>
     </Container>
@@ -49,6 +51,7 @@ const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 45%;
   margin-top: -3px;
 `;
