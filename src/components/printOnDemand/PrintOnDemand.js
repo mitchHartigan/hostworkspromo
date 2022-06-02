@@ -7,7 +7,7 @@ import { ProductCard } from "./ProductCard";
 const businessCardData = {
   imgSrc: "oasis_business_card.png",
   imgAlt: "Eugene Oasis Business Card",
-  name: "Business Card, Rounded Corners, 2 Sided",
+  name: "Business Card, Rounded, 2 Sided",
 };
 
 const bookmarkData = {

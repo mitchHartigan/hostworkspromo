@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ProductCard = (props) => {
   const { imgSrc, imgAlt, name } = props;
 
-  const cardWidth = 350;
+  const cardWidth = 330;
   const cardHeight = 325;
 
   return (
@@ -30,7 +30,8 @@ const Container = styled.div`
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 0px 7px rgba(255, 90, 95, 1);
+    /* box-shadow: 0px 0px 7px rgba(255, 90, 95, 1); */
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.55);
     transform: scale(1.01);
   }
 `;
