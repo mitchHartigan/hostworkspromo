@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar/Navbar.js";
 import { ContentBlocks } from "./components/contentBlocks/index.js";
 
 import { globalStyles } from "./globalStyles";
+import { PrintOnDemand } from "./components/printOnDemand/PrintOnDemand.js";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Hero />
         <ContentBlocks />
+        <PrintOnDemand />
       </>
     </ThemeProvider>
   );
