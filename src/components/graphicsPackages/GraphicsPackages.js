@@ -43,6 +43,7 @@ export const GraphicsPackages = (props) => {
 
   return (
     <VisibilitySensor
+      partialVisibility={true}
       onChange={(visible) => {
         if (visible) setVisible(true);
       }}
