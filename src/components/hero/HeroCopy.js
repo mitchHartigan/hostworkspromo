@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Button } from "../Button";
+import { FadeIn } from "..//FadeIn";
 
 export const HeroCopy = (props) => {
   function handleRedirect() {
@@ -12,9 +13,15 @@ export const HeroCopy = (props) => {
   return (
     <Container>
       <TitleContainer>
-        <Title src="full_name_logo.png" alt="Full name logo." />
-        <Subtitle>Elevate the guest experience.</Subtitle>
-        <Button handleClick={handleRedirect}>Find out how</Button>
+        <FadeIn delay="300" visible>
+          <Title src="full_name_logo.png" alt="Full name logo." />
+        </FadeIn>
+        <FadeIn delay="500" visible>
+          <Subtitle>Elevate the guest experience.</Subtitle>
+        </FadeIn>
+        <FadeIn delay="700" visible>
+          <Button handleClick={handleRedirect}>Find out how</Button>
+        </FadeIn>
       </TitleContainer>
     </Container>
   );
@@ -45,8 +52,6 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.img`
-  margin-bottom: 10px;
-
   @media (max-width: 900px) {
     width: 80%;
     height: auto;
@@ -58,8 +63,10 @@ const Subtitle = styled.h3`
   font-family: ${({ theme }) => theme.font};
   font-size: ${({ theme }) => theme.text.lg};
   font-weight: 400;
+  margin-top: 0px;
 
   @media (max-width: 900px) {
     font-size: ${({ theme }) => theme.text.md};
+    margin-top: 0px;
   }
 `;

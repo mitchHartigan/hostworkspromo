@@ -78,4 +78,8 @@ const Text = styled.p`
   font-size: ${({ theme }) => theme.text.sm};
   text-align: center;
   margin-top: 20px;
+
+  @media (max-width: 900px) {
+    padding: 0px 20px 0px 20px;
+  }
 `;

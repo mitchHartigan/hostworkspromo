@@ -19,7 +19,7 @@ const impressionData = {
   imgAlt: "Eugene Oasis branded products.",
   title: "Make a lasting impression.",
   description:
-    "Guest Amenities used for reference are more highly valued. The data provides value far in excess of the item itself. Custom amenities are used multiple times per day and can be kept for 2+ years. Three factors influence a Guest's decision to book your property. Pictures, Price and Reviews. These products are proven to add value to your guests' stay and influence positive reviews.",
+    "Guest Amenities used for reference are more highly valued. The data provides value far in excess of the item itself. Custom amenities are used multiple times per day and can be kept for 2+ years. Three factors influence a Guest's decision to book your property. Pictures, Price and Reviews. Drive traffic to local event calendars and engage visitors more deeply in what the community has to offer.",
   buttonText: "Get your design now",
   buttonLink:
     "https://www.hostworkspromo.com/si/365452884/gp1/graphic-package-1",
@@ -30,7 +30,7 @@ const referralsData = {
   imgAlt: "Eugene Oasis logo converting to 5 star reviews",
   title: "Get more visitor referalls",
   description:
-    "Custom amenities are used multiple times per day and can be kept for 2+ years. ADDITIONALLY, these products are passed along - nearly two-thirds are given away after the original recipient is finished using the item.",
+    "Custom amenities are used multiple times per day and can be kept for 2+ years. ADDITIONALLY, these products are passed along - nearly two-thirds are given away after the original recipient is finished using the item. They are proven to add value to your guests stay and influence positive reviews.",
   buttonText: "Browse our products",
   buttonLink:
     "https://www.hostworkspromo.com/si/365452884/gp1/graphic-package-1",

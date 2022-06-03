@@ -23,6 +23,10 @@ const Container = styled.div`
   align-items: center;
   margin: 0px 2vw 0vh 2vw;
   cursor: pointer;
+
+  @media (max-width: 900px) {
+    margin: 20px 20px 20px 20px;
+  }
 `;
 
 const Image = styled.img`

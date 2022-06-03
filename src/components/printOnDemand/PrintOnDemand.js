@@ -57,6 +57,10 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   margin: 12vh 0vw 15vh 0vw;
+
+  @media (max-width: 900px) {
+    margin: 40px 0px 70px 0px;
+  }
 `;
 
 const ProductCardContainer = styled.div`

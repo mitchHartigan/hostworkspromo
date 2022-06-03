@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import VisibilitySensor from "react-visibility-sensor";
 
 import { Title } from "../Title";
 import { Button } from "../Button";
+import { FadeIn } from "../FadeIn";
 
 export const Summary = (props) => {
+  const [visible, setVisible] = useState(false);
   const { swap, data } = props;
 
   const { imgSrc, imgAlt, title, description, buttonText, buttonLink } = data;
@@ -12,16 +15,32 @@ export const Summary = (props) => {
   return (
     <Container swap={swap}>
       <ImageContainer swap={swap}>
-        <Image src={imgSrc} alt={imgAlt} />
+        <VisibilitySensor
+          partialVisibility={true}
+          minTopValue={300}
+          onChange={(visible) => {
+            if (visible) setVisible(true);
+          }}
+        >
+          <FadeIn delay="0" visible={visible}>
+            <Image src={imgSrc} alt={imgAlt} />
+          </FadeIn>
+        </VisibilitySensor>
       </ImageContainer>
       <DescriptionContainer swap={swap}>
-        <Title align="flex-start" spanWidth="278px">
-          {title}
-        </Title>
-        <Text>{description}</Text>
-        <Button handleClick={() => (window.location.href = buttonLink)}>
-          {buttonText}
-        </Button>
+        <FadeIn delay="0" visible={visible}>
+          <Title align="flex-start" spanWidth="278px">
+            {title}
+          </Title>
+        </FadeIn>
+        <FadeIn delay="250" visible={visible}>
+          <Text>{description}</Text>
+        </FadeIn>
+        <FadeIn delay="325" visible={visible}>
+          <Button handleClick={() => (window.location.href = buttonLink)}>
+            {buttonText}
+          </Button>
+        </FadeIn>
       </DescriptionContainer>
     </Container>
   );
