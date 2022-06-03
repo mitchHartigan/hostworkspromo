@@ -28,7 +28,7 @@ const playingCardData = {
   name: "Playing Cards",
 };
 
-export const PrintOnDemand = (props) => {
+export const PrintOnDemand = () => {
   return (
     <Container>
       <Title align="center" spanWidth="207px">

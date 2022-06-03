@@ -7,6 +7,7 @@ import { ContentBlocks } from "./components/contentBlocks/index.js";
 
 import { globalStyles } from "./globalStyles";
 import { PrintOnDemand } from "./components/printOnDemand/PrintOnDemand.js";
+import { GraphicsPackages } from "./components/graphicsPackages/GraphicsPackages.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <ContentBlocks />
         <PrintOnDemand />
+        <GraphicsPackages />
       </>
     </ThemeProvider>
   );
