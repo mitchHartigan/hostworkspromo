@@ -23,6 +23,8 @@ export const SearchBarLink = (props) => {
 };
 
 const Input = styled.input`
+  grid-column: 2 / 3;
+  align-self: center;
   background-color: white;
   border-radius: 10px;
   font-family: ${({ theme }) => theme.font};

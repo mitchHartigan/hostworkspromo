@@ -25,7 +25,8 @@ const Container = styled.div`
 `;
 
 const Icon = styled.img`
-  margin-right: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
 `;
 
 const Text = styled.p`
