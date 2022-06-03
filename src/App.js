@@ -8,6 +8,7 @@ import { ContentBlocks } from "./components/contentBlocks/index.js";
 import { globalStyles } from "./globalStyles";
 import { PrintOnDemand } from "./components/printOnDemand/PrintOnDemand.js";
 import { GraphicsPackages } from "./components/graphicsPackages/GraphicsPackages.js";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <ContentBlocks />
         <PrintOnDemand />
         <GraphicsPackages />
+        <Footer />
       </>
     </ThemeProvider>
   );
