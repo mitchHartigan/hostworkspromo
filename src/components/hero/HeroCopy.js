@@ -12,7 +12,7 @@ export const HeroCopy = (props) => {
   return (
     <Container>
       <TitleContainer>
-        <Title src="full_name_logo.svg" alt="Full name logo." />
+        <Title src="full_name_logo.png" alt="Full name logo." />
         <Subtitle>Elevate the guest experience.</Subtitle>
         <Button handleClick={handleRedirect}>Find out how</Button>
       </TitleContainer>
@@ -45,11 +45,10 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.img`
-  filter: drop-shadow(2px 5px 2px rgb(0, 0, 0, 0.4));
   margin-bottom: 10px;
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 80%;
     height: auto;
     margin-bottom: 0px;
   }
