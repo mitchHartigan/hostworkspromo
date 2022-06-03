@@ -49,7 +49,8 @@ const Title = styled.img`
   margin-bottom: 10px;
 
   @media (max-width: 900px) {
-    transform: scale(70%);
+    width: 100%;
+    height: auto;
     margin-bottom: 0px;
   }
 `;
