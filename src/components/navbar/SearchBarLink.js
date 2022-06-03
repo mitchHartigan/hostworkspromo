@@ -35,4 +35,8 @@ const Input = styled.input`
   border: none;
   outline: none;
   width: 400px;
+
+  @media (max-width: 1700px) {
+    width: 100%;
+  }
 `;

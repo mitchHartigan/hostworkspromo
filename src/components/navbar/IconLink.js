@@ -22,6 +22,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  margin: 0px 20px 0px 20px;
 `;
 
 const Icon = styled.img`

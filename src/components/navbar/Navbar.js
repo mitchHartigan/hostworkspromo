@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Hamburger } from "./Hamburger";
 import { IconLink } from "./IconLink";
 import { SearchBarLink } from "./SearchBarLink";
 
@@ -8,6 +9,7 @@ import { TextLink } from "./TextLink";
 export const Navbar = () => {
   return (
     <Container>
+      <Hamburger />
       <Bar>
         <LinkContainer>
           <TextLinkContainer>
@@ -61,9 +63,9 @@ const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   box-sizing: border-box;
-  padding: 0px 30px 0px 0px;
+  padding: 0px 0px 0px 0px;
 `;
 
 const Container = styled.div`
@@ -85,6 +87,10 @@ const Bar = styled.div`
   width: 100%;
   height: 50px;
   background-color: black;
+
+  @media (max-width: 1450px) {
+    display: none;
+  }
 `;
 
 const LinkContainer = styled.div`
