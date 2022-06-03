@@ -41,6 +41,7 @@ export const PrintOnDemand = () => {
 
   return (
     <VisibilitySensor
+      partialVisibility
       onChange={(visibile) => {
         if (visibile) setVisible(true);
       }}

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ContactInfo } from "./ContactInfo";
-import { Socials } from "./Socials";
 
 export const Footer = (props) => {
   return (
@@ -9,7 +8,6 @@ export const Footer = (props) => {
       <InfoContainer>
         <Image src="hostworks_footer.png" />
         <ContactInfo />
-        <Socials />
       </InfoContainer>
       <Bar />
     </FooterContainer>
