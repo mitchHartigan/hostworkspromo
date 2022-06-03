@@ -26,6 +26,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+
+  @media (max-width: 1450px) {
+    margin-top: 20px;
+  }
 `;
 
 const ImageLink = styled.img`

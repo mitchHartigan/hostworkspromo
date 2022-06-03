@@ -34,6 +34,18 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 8vh 0vw 8vh 0vw;
+
+  @media (max-width: 1450px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 20px 10vh 20px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 30px 20px 30px 20px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -43,7 +55,15 @@ const ImageContainer = styled.div`
   grid-row-start: 1;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  @media (max-width: 1450px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+    height: auto;
+  }
+`;
 
 const DescriptionContainer = styled.div`
   grid-column: ${(props) => (props.swap ? "2 / 3" : "4 / 5")};
@@ -54,6 +74,11 @@ const DescriptionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 1600px) {
+    align-items: center;
+    margin: 1vh 0px 1vh 0px;
+  }
 `;
 
 const Text = styled.p`
@@ -61,4 +86,10 @@ const Text = styled.p`
   font-size: ${({ theme }) => theme.text.sm};
   line-height: 28px;
   margin-top: 20px;
+
+  @media (max-width: 1600px) {
+    font-size: ${({ theme }) => theme.text.xs};
+    max-width: 700px;
+    text-align: center;
+  }
 `;

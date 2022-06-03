@@ -62,6 +62,10 @@ const Container = styled.div`
 const ProductCardContainer = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 1450px) {
+    flex-direction: column;
+  }
 `;
 
 const Text = styled.p`

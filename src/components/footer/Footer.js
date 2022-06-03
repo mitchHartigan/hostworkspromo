@@ -27,6 +27,11 @@ const InfoContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
   margin: 40px 0px 30px 0px;
+
+  @media (max-width: 1450px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Image = styled.img``;

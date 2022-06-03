@@ -67,6 +67,10 @@ const PackagesContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 4vh;
+
+  @media (max-width: 1450px) {
+    flex-direction: column;
+  }
 `;
 
 const Text = styled.p`
