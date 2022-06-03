@@ -28,7 +28,7 @@ const impressionData = {
 const referralsData = {
   imgSrc: "referalls.png",
   imgAlt: "Eugene Oasis logo converting to 5 star reviews",
-  title: "Get more visitor referalls",
+  title: "Get more visitor referalls.",
   description:
     "Custom amenities are used multiple times per day and can be kept for 2+ years. ADDITIONALLY, these products are passed along - nearly two-thirds are given away after the original recipient is finished using the item. They are proven to add value to your guests stay and influence positive reviews.",
   buttonText: "Browse our products",
