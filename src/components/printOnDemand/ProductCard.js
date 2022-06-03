@@ -2,20 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 export const ProductCard = (props) => {
-  const { imgSrc, imgAlt, name, linkTarget } = props;
+  const { imgSrc, imgAlt, name } = props;
 
   const cardWidth = 330;
   const cardHeight = 325;
-
-  function redirect(destination) {
-    window.location.href = destination;
-  }
 
   return (
     <Container
       cardWidth={cardWidth}
       cardHeight={cardHeight}
-      onClick={() => redirect(linkTarget)}
+      href="https://hostworkspromo.orders.com/"
+      target="_blank"
     >
       <Image src={imgSrc} alt={imgAlt} />
       <Text>{name}</Text>
@@ -23,7 +20,7 @@ export const ProductCard = (props) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,6 +32,8 @@ const Container = styled.div`
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.42);
   margin: 0px 15px 0px 15px;
   border-radius: 3px;
+  text-decoration: none;
+  color: black;
   cursor: pointer;
 
   &:hover {

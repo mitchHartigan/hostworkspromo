@@ -103,7 +103,7 @@ const DescriptionContainer = styled.div`
 const Text = styled.p`
   font-family: ${({ theme }) => theme.font};
   font-size: ${({ theme }) => theme.text.sm};
-  line-height: 28px;
+  line-height: 31px;
   margin-top: 20px;
 
   @media (max-width: 1600px) {

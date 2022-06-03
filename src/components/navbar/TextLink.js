@@ -4,25 +4,24 @@ import styled from "styled-components";
 export const TextLink = (props) => {
   const { children, destination, menu } = props;
 
-  function redirect(destination) {
-    window.location.href = destination;
-  }
-
   return (
-    <Container menu={menu} onClick={() => redirect(destination)}>
-      <Text menu={menu}>{children}</Text>
+    <Container menu={menu}>
+      <Text href={destination} target="_blank" menu={menu}>
+        {children}
+      </Text>
     </Container>
   );
 };
 
-const Text = styled.p`
+const Text = styled.a`
   font-family: ${({ theme }) => theme.font};
   font-size: ${({ theme }) => theme.text.sm};
   color: ${(props) => (props.menu ? "black" : "white")};
   cursor: pointer;
+  text-decoration: none;
 `;
 
-const Container = styled.div`
+const Container = styled.p`
   display: flex;
   flex-direction: row;
   justify-content: ${(props) => (props.menu ? "flex-start" : "center")};
