@@ -34,6 +34,10 @@ const TitleContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 1450px) {
+    align-items: center;
+  }
 `;
 
 const Title = styled.img`
@@ -45,17 +49,8 @@ const Subtitle = styled.h3`
   font-family: ${({ theme }) => theme.font};
   font-size: ${({ theme }) => theme.text.lg};
   font-weight: 400;
-`;
 
-// const Button = styled.button`
-//   margin-top: 10px;
-//   padding: 5px 20px 5px 20px;
-//   background-color: white;
-//   font-family: ${({ theme }) => theme.font};
-//   font-size: ${({ theme }) => theme.text.md};
-//   font-weight: 500;
-//   border-radius: 10px;
-//   border: none;
-//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   cursor: pointer;
-// `;
+  @media (max-width: 900px) {
+    font-size: ${({ theme }) => theme.text.sm};
+  }
+`;

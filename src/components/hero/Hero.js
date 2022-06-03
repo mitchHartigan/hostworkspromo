@@ -21,4 +21,8 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: none;
+
+  @media (max-width: 1450px) {
+    align-items: center;
+  }
 `;
