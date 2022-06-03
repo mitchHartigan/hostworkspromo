@@ -23,4 +23,8 @@ const ButtonEl = styled.button`
     transform: translate(0px, -2px);
   }
   transition: transform 100ms ease;
+
+  @media (max-width: 900px) {
+    font-size: ${({ theme }) => theme.text.sm};
+  }
 `;

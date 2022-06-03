@@ -27,6 +27,10 @@ const Container = styled.div`
   align-items: center;
   margin-left: 10vw;
   margin-top: -11vh;
+
+  @media (max-width: 900px) {
+    margin-left: 0px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -43,6 +47,11 @@ const TitleContainer = styled.div`
 const Title = styled.img`
   filter: drop-shadow(2px 5px 2px rgb(0, 0, 0, 0.4));
   margin-bottom: 10px;
+
+  @media (max-width: 900px) {
+    transform: scale(70%);
+    margin-bottom: 0px;
+  }
 `;
 
 const Subtitle = styled.h3`
@@ -51,6 +60,6 @@ const Subtitle = styled.h3`
   font-weight: 400;
 
   @media (max-width: 900px) {
-    font-size: ${({ theme }) => theme.text.sm};
+    font-size: ${({ theme }) => theme.text.md};
   }
 `;
