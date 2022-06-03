@@ -40,30 +40,30 @@ export const PrintOnDemand = () => {
   const [visible, setVisible] = useState();
 
   return (
-    <Container>
-      <VisibilitySensor
-        onChange={(visibile) => {
-          if (visibile) setVisible(true);
-        }}
-      >
+    <VisibilitySensor
+      onChange={(visibile) => {
+        if (visibile) setVisible(true);
+      }}
+    >
+      <Container>
         <FadeIn delay="0" visible={visible}>
           <Title align="center" spanWidth="207px">
             Print on Demand
           </Title>
         </FadeIn>
-      </VisibilitySensor>
-      <FadeIn delay="200" visible={visible}>
-        <Text>Low order minimums and fast turnarounds.</Text>
-      </FadeIn>
-      <FadeIn delay="400" visible={visible}>
-        <ProductCardContainer>
-          <ProductCard {...businessCardData} />
-          <ProductCard {...bookmarkData} />
-          <ProductCard {...memoPadData} />
-          <ProductCard {...playingCardData} />
-        </ProductCardContainer>
-      </FadeIn>
-    </Container>
+        <FadeIn delay="200" visible={visible}>
+          <Text>Low order minimums and fast turnarounds.</Text>
+        </FadeIn>
+        <FadeIn delay="400" visible={visible}>
+          <ProductCardContainer>
+            <ProductCard {...businessCardData} />
+            <ProductCard {...bookmarkData} />
+            <ProductCard {...memoPadData} />
+            <ProductCard {...playingCardData} />
+          </ProductCardContainer>
+        </FadeIn>
+      </Container>
+    </VisibilitySensor>
   );
 };
 

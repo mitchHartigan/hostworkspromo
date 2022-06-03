@@ -42,30 +42,30 @@ export const GraphicsPackages = (props) => {
   const [visible, setVisible] = useState();
 
   return (
-    <Container>
-      <VisibilitySensor
-        onChange={(visible) => {
-          if (visible) setVisible(true);
-        }}
-      >
+    <VisibilitySensor
+      onChange={(visible) => {
+        if (visible) setVisible(true);
+      }}
+    >
+      <Container>
         <FadeIn delay="0" visible={visible}>
           <Title align="center" spanWidth="280px">
             Our Graphics Packages
           </Title>
         </FadeIn>
-      </VisibilitySensor>
-      <FadeIn delay="200" visible={visible}>
-        <Text>A selection of graphics packages to choose from.</Text>
-      </FadeIn>
-      <FadeIn delay="400" visible={visible}>
-        <PackagesContainer>
-          <Package {...package1Data} />
-          <Package {...package2Data} />
-          <Package {...package3Data} />
-          <Package {...package4Data} />
-        </PackagesContainer>
-      </FadeIn>
-    </Container>
+        <FadeIn delay="200" visible={visible}>
+          <Text>A selection of graphics packages to choose from.</Text>
+        </FadeIn>
+        <FadeIn delay="400" visible={visible}>
+          <PackagesContainer>
+            <Package {...package1Data} />
+            <Package {...package2Data} />
+            <Package {...package3Data} />
+            <Package {...package4Data} />
+          </PackagesContainer>
+        </FadeIn>
+      </Container>
+    </VisibilitySensor>
   );
 };
 
