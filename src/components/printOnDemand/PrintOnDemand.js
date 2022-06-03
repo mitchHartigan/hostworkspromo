@@ -56,7 +56,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 5vh 0vw 10vh 0vw;
+  margin: 12vh 0vw 15vh 0vw;
 `;
 
 const ProductCardContainer = styled.div`

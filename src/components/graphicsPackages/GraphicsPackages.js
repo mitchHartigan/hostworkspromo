@@ -58,6 +58,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5vh 0vw 6vh 0vw;
 `;
 
 const PackagesContainer = styled.div`

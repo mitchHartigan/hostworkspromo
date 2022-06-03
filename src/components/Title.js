@@ -26,8 +26,8 @@ const Text = styled.div`
 `;
 
 const Underline = styled.div`
-  height: 3px;
-  margin-top: 5px;
+  height: 4px;
+  margin-top: 3px;
   width: ${(props) => props.spanWidth};
   background-color: ${({ theme }) => theme.color};
 `;
