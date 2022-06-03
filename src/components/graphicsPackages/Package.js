@@ -30,6 +30,11 @@ const Image = styled.img`
     transform: translate(0, -2px);
   }
   transition: transform 100ms ease;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Text = styled.p`

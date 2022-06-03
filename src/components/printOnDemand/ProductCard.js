@@ -42,9 +42,21 @@ const Container = styled.div`
     transform: translate(0px, -2px);
   }
   transition: transform 100ms ease;
+
+  @media (max-width: 900px) {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+  }
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  @media (max-width: 900px) {
+    width: 100%;
+    height: auto;
+  }
+`;
 
 const Text = styled.p`
   font-family: ${({ theme }) => theme.font};
