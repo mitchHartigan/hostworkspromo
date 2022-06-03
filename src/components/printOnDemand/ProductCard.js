@@ -39,8 +39,9 @@ const Container = styled.div`
 
   &:hover {
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.55);
-    transform: scale(1.01);
+    transform: translate(0px, -2px);
   }
+  transition: transform 100ms ease;
 `;
 
 const Image = styled.img``;

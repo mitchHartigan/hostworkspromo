@@ -27,8 +27,9 @@ const Container = styled.div`
 
 const Image = styled.img`
   &:hover {
-    transform: scale(1.01);
+    transform: translate(0, -2px);
   }
+  transition: transform 100ms ease;
 `;
 
 const Text = styled.p`
