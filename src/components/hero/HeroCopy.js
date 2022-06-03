@@ -14,7 +14,9 @@ export const HeroCopy = (props) => {
     <Container>
       <TitleContainer>
         <FadeIn delay="300" visible>
-          <Title src="full_name_logo.png" alt="Full name logo." />
+          <ImgCenterer>
+            <Title src="full_name_logo.png" alt="Full name logo." />
+          </ImgCenterer>
         </FadeIn>
         <FadeIn delay="500" visible>
           <Subtitle>Elevate the guest experience.</Subtitle>
@@ -26,6 +28,13 @@ export const HeroCopy = (props) => {
     </Container>
   );
 };
+
+const ImgCenterer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Container = styled.div`
   display: flex;

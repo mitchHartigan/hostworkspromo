@@ -43,11 +43,14 @@ const Container = styled.div`
   }
   transition: transform 100ms ease;
 
+  @media (max-width: 1450px) {
+    margin: 20px 0px 20px 0px;
+  }
+
   @media (max-width: 900px) {
     box-sizing: border-box;
     width: 100%;
     height: auto;
-    margin: 20px 0px 20px 0px;
   }
 `;
 
