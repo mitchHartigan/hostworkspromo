@@ -13,7 +13,7 @@ const businessCardData = {
 const bookmarkData = {
   imgSrc: "oasis_bookmarks.png",
   imgAlt: "Eugene Oasis Bookmarks",
-  name: "Bookmark, 2.25 x 8.25, 2 Sided",
+  name: "Bookmarks, 2.25 x 8.25, 2 Sided",
 };
 
 const memoPadData = {
