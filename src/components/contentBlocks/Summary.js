@@ -29,18 +29,17 @@ export const Summary = (props) => {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: ${(props) =>
-    props.swap ? "11% 36% 10% 34% 9%" : "10% 35% 7% 39% 9%"};
+  grid-template-columns: 10% 35% 10% 35% 10%;
   grid-template-rows: 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 10vh 0vw 10vh 0vw;
+  padding: 8vh 0vw 8vh 0vw;
 `;
 
 const ImageContainer = styled.div`
   grid-column: ${(props) => (props.swap ? "4 / 5" : "2 / 3")};
-  align-self: end;
-  justify-self: start;
+  align-self: center;
+  justify-self: center;
   grid-row-start: 1;
 `;
 

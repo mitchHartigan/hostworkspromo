@@ -26,12 +26,14 @@ const impressionData = {
 };
 
 const referralsData = {
-  imgSrc: "",
-  imgAlt: "",
-  title: "",
-  description: "",
-  buttonText: "",
-  buttonLink: "",
+  imgSrc: "referalls.png",
+  imgAlt: "Eugene Oasis logo converting to 5 star reviews",
+  title: "Get more visitor referalls",
+  description:
+    "Custom amenities are used multiple times per day and can be kept for 2+ years. ADDITIONALLY, these products are passed along - nearly two-thirds are given away after the original recipient is finished using the item.",
+  buttonText: "Browse our products",
+  buttonLink:
+    "https://www.hostworkspromo.com/si/365452884/gp1/graphic-package-1",
 };
 
 export const ContentBlocks = (props) => {
@@ -48,4 +50,5 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.backgroundColor};
+  padding: 3vh 0vw 3vh 0vw;
 `;
