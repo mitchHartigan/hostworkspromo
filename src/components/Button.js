@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 export const Button = (props) => {
   const { handleClick, children } = props;
-  return <Button_ onClick={handleClick}>{children}</Button_>;
+  return <ButtonEl onClick={handleClick}>{children}</ButtonEl>;
 };
 
-const Button_ = styled.button`
+const ButtonEl = styled.button`
   margin-top: 10px;
   padding: 5px 20px 5px 20px;
   background-color: white;

@@ -3,15 +3,6 @@ import styled from "styled-components";
 
 import { Summary } from "./Summary";
 
-// const visitorData = {
-//   imgSrc: "",
-//   imgAlt: "",
-//   title: "",
-//   description: "",
-//   buttonText: "",
-//   buttonLink: "",
-// };
-
 const visitorData = {
   imgSrc: "mug_img.png",
   imgAlt: "mug image",
@@ -48,6 +39,7 @@ export const ContentBlocks = (props) => {
     <Container>
       <Summary data={visitorData} />
       <Summary data={impressionData} swap />
+      <Summary data={referralsData} />
     </Container>
   );
 };
