@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Title } from "../Title";
 import { ProductCard } from "./ProductCard";
+
+import VisibilitySensor from "react-visibility-sensor";
+import { FadeIn } from "../FadeIn";
 
 const businessCardData = {
   imgSrc: "oasis_business_card.png",
@@ -34,18 +37,32 @@ const playingCardData = {
 };
 
 export const PrintOnDemand = () => {
+  const [visible, setVisible] = useState();
+
   return (
     <Container>
-      <Title align="center" spanWidth="207px">
-        Print on Demand
-      </Title>
-      <Text>Low order minimums and fast turnarounds.</Text>
-      <ProductCardContainer>
-        <ProductCard {...businessCardData} />
-        <ProductCard {...bookmarkData} />
-        <ProductCard {...memoPadData} />
-        <ProductCard {...playingCardData} />
-      </ProductCardContainer>
+      <VisibilitySensor
+        onChange={(visibile) => {
+          if (visibile) setVisible(true);
+        }}
+      >
+        <FadeIn delay="0" visible={visible}>
+          <Title align="center" spanWidth="207px">
+            Print on Demand
+          </Title>
+        </FadeIn>
+      </VisibilitySensor>
+      <FadeIn delay="200" visible={visible}>
+        <Text>Low order minimums and fast turnarounds.</Text>
+      </FadeIn>
+      <FadeIn delay="400" visible={visible}>
+        <ProductCardContainer>
+          <ProductCard {...businessCardData} />
+          <ProductCard {...bookmarkData} />
+          <ProductCard {...memoPadData} />
+          <ProductCard {...playingCardData} />
+        </ProductCardContainer>
+      </FadeIn>
     </Container>
   );
 };

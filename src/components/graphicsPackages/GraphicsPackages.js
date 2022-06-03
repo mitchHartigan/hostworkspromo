@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Title } from "../Title";
 import { Package } from "./Package";
+import VisibilitySensor from "react-visibility-sensor";
+import { FadeIn } from "../FadeIn";
 
 const package1Data = {
   imgSrc: "graphics_1.png",
@@ -37,18 +39,32 @@ const package4Data = {
 };
 
 export const GraphicsPackages = (props) => {
+  const [visible, setVisible] = useState();
+
   return (
     <Container>
-      <Title align="center" spanWidth="280px">
-        Our Graphics Packages
-      </Title>
-      <Text>A selection of graphics packages to choose from.</Text>
-      <PackagesContainer>
-        <Package {...package1Data} />
-        <Package {...package2Data} />
-        <Package {...package3Data} />
-        <Package {...package4Data} />
-      </PackagesContainer>
+      <VisibilitySensor
+        onChange={(visible) => {
+          if (visible) setVisible(true);
+        }}
+      >
+        <FadeIn delay="0" visible={visible}>
+          <Title align="center" spanWidth="280px">
+            Our Graphics Packages
+          </Title>
+        </FadeIn>
+      </VisibilitySensor>
+      <FadeIn delay="200" visible={visible}>
+        <Text>A selection of graphics packages to choose from.</Text>
+      </FadeIn>
+      <FadeIn delay="400" visible={visible}>
+        <PackagesContainer>
+          <Package {...package1Data} />
+          <Package {...package2Data} />
+          <Package {...package3Data} />
+          <Package {...package4Data} />
+        </PackagesContainer>
+      </FadeIn>
     </Container>
   );
 };
