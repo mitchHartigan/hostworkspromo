@@ -2,14 +2,20 @@ import React from "react";
 import styled from "styled-components";
 
 export const Package = (props) => {
-  const { imgSrc, imgAlt, name, linkTarget } = props;
+  const { imgSrc, imgAlt, name } = props;
 
   function redirect(destination) {
     window.location.href = destination;
   }
 
   return (
-    <Container onClick={() => redirect(linkTarget)}>
+    <Container
+      onClick={() =>
+        redirect(
+          "https://www.hostworkspromo.com/ws/ws.dll/Showroom?DistID=228063&StoreID=218372#5452884"
+        )
+      }
+    >
       <Image src={imgSrc} alt={imgAlt} />
       <Text>{name}</Text>
     </Container>

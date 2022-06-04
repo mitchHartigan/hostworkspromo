@@ -6,7 +6,11 @@ export const TextLink = (props) => {
 
   return (
     <Container menu={menu}>
-      <Text href={destination} target="_blank" menu={menu}>
+      <Text
+        href={destination}
+        target={children === "Art and Upload" ? "_blank" : ""}
+        menu={menu}
+      >
         {children}
       </Text>
     </Container>
