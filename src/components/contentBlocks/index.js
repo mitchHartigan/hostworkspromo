@@ -8,7 +8,7 @@ const visitorData = {
   imgAlt: "mug image",
   title: "Get more visitor engagement.",
   description:
-    "Proven solutions for visitor engagement. These items are proven to be more highly valued and kept longer. Use to promote mobile engagement, multiple impressions over many YEARS and referrals.",
+    "Proven solutions for visitor engagement. These items are proven to be more highly valued and kept longer. Use to promote mobile engagement, multiple impressions and referrals over many YEARS.",
   buttonText: "Find out how",
   buttonLink: "https://www.hostworkspromo.com/why-hostworks.htm",
 };
