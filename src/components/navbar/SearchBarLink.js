@@ -9,7 +9,7 @@ export const SearchBarLink = (props) => {
   }
 
   function handleSubmit({ keyCode }) {
-    const locationStr = `https://www.hostworkspromo.com/:quicksearch.htm?quicksearchbox=${inputText}&LoP=&HiP=`;
+    const locationStr = `https://www.promoplace.com/hostworkspromo/:quicksearch.htm?quicksearchbox=${inputText}&LoP=&HiP=`;
     if (keyCode === 13) window.location.href = locationStr;
   }
 

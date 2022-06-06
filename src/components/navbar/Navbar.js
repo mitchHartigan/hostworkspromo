@@ -14,16 +14,16 @@ export const Navbar = () => {
         <LinkContainer>
           <TextLinkContainer>
             <TextLink destination="/">Home</TextLink>
-            <TextLink destination="https://www.hostworkspromo.com/why-hostworks.htm">
+            <TextLink destination="https://www.promoplace.com/hostworkspromo/why-hostworks.htm">
               Why Hostworks
             </TextLink>
-            <TextLink destination="https://www.hostworkspromo.com/artupload.htm">
+            <TextLink destination="https://www.promoplace.com/hostworkspromo/artupload.htm">
               Art and Upload
             </TextLink>
-            <TextLink destination="https://www.hostworkspromo.com/contact.htm">
+            <TextLink destination="https://www.promoplace.com/hostworkspromo/contact.htm">
               Contact
             </TextLink>
-            <TextLink destination="https://www.hostworkspromo.com/">
+            <TextLink destination="https://www.promoplace.com/hostworkspromo/">
               Products
             </TextLink>
           </TextLinkContainer>
@@ -32,14 +32,14 @@ export const Navbar = () => {
             <IconLink
               iconSrc="sign_in.svg"
               iconAlt="sign in icon"
-              destination="https://www.hostworkspromo.com/signin.htm"
+              destination="https://www.promoplace.com/hostworkspromo/signin.htm"
             >
               Sign In
             </IconLink>
             <IconLink
               iconSrc="cart.svg"
               iconAlt="cart icon"
-              destination="https://www.hostworkspromo.com/cart.htm"
+              destination="https://www.promoplace.com/hostworkspromo/cart.htm"
             >
               Cart
             </IconLink>

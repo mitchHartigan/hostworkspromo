@@ -20,26 +20,35 @@ export const Menu = (props) => {
         </TextLink>
         <TextLink
           menu
-          destination="https://www.hostworkspromo.com/why-hostworks.htm"
+          destination="https://www.promoplace.com/hostworkspromo/why-hostworks.htm"
         >
           Why Hostworks
         </TextLink>
         <TextLink
           menu
-          destination="https://www.hostworkspromo.com/artupload.htm"
+          destination="https://www.promoplace.com/hostworkspromo/artupload.htm"
         >
           Art and Upload
         </TextLink>
-        <TextLink menu destination="https://www.hostworkspromo.com/contact.htm">
+        <TextLink
+          menu
+          destination="https://www.promoplace.com/hostworkspromo/contact.htm"
+        >
           Contact
         </TextLink>
-        <TextLink menu destination="https://www.hostworkspromo.com/">
+        <TextLink menu destination="https://www.promoplace.com/hostworkspromo/">
           Products
         </TextLink>
-        <TextLink menu destination="https://www.hostworkspromo.com/signin.htm">
+        <TextLink
+          menu
+          destination="https://www.promoplace.com/hostworkspromo/signin.htm"
+        >
           Sign In
         </TextLink>
-        <TextLink menu destination="https://www.hostworkspromo.com/cart.htm">
+        <TextLink
+          menu
+          destination="https://www.promoplace.com/hostworkspromo/cart.htm"
+        >
           Cart
         </TextLink>
       </LinkContainer>

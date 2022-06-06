@@ -12,7 +12,7 @@ export const Package = (props) => {
     <Container
       onClick={() =>
         redirect(
-          "https://www.hostworkspromo.com/ws/ws.dll/Showroom?DistID=228063&StoreID=218372#5452884"
+          "https://www.promoplace.com/hostworkspromo/ws/ws.dll/Showroom?DistID=228063&StoreID=218372#5452884"
         )
       }
     >

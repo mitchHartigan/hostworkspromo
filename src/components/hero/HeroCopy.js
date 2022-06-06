@@ -6,7 +6,8 @@ import { FadeIn } from "..//FadeIn";
 
 export const HeroCopy = (props) => {
   function handleRedirect() {
-    const locationStr = "https://www.hostworkspromo.com/why-hostworks.htm";
+    const locationStr =
+      "https://www.promoplace.com/hostworkspromo/why-hostworks.htm";
     window.location.href = locationStr;
   }
 

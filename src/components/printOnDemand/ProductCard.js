@@ -11,7 +11,7 @@ export const ProductCard = (props) => {
     <Container
       cardWidth={cardWidth}
       cardHeight={cardHeight}
-      href="https://hostworkspromo.orders.com/"
+      href="https://promoplace.com/hostworkspromo.orders.com/"
       target="_blank"
     >
       <Image src={imgSrc} alt={imgAlt} />

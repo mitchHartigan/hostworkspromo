@@ -11,7 +11,7 @@ const package1Data = {
   imgAlt: "Eugene Oasis Business cards in circle.",
   name: "Graphics Package 1",
   linkTarget:
-    "https://www.hostworkspromo.com/si/365452884/gp1/graphic-package-1",
+    "https://www.promoplace.com/hostworkspromo/si/365452884/gp1/graphic-package-1",
 };
 
 const package2Data = {
@@ -19,7 +19,7 @@ const package2Data = {
   imgAlt: "Eugene Oasis memo pad and pencil.",
   name: "Graphics Package 2",
   linkTarget:
-    "https://www.hostworkspromo.com/si/595452897/gp2/graphic-package-2",
+    "https://www.promoplace.com/hostworkspromo/si/595452897/gp2/graphic-package-2",
 };
 
 const package3Data = {
@@ -27,7 +27,7 @@ const package3Data = {
   imgAlt: "Eugene Oasis graphics being designed on a laptop.",
   name: "Graphics Package 3",
   linkTarget:
-    "https://www.hostworkspromo.com/si/395452899/gp3/graphic-package-3",
+    "https://www.promoplace.com/hostworkspromo/si/395452899/gp3/graphic-package-3",
 };
 
 const package4Data = {
@@ -35,7 +35,7 @@ const package4Data = {
   imgAlt: "Eugene Oasis graphics displayed on a laptop",
   name: "Superhost Starter Kit",
   linkTarget:
-    "https://www.hostworkspromo.com/si/525452901/sh5s/super-host-5-star-starter-kit-",
+    "https://www.promoplace.com/hostworkspromo/si/525452901/sh5s/super-host-5-star-starter-kit-",
 };
 
 export const GraphicsPackages = (props) => {
