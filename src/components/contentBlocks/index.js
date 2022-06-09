@@ -20,7 +20,8 @@ const impressionData = {
   description:
     "Guest Amenities used for reference are more highly valued. Drive traffic to local event calendars and engage visitors more deeply in what the community has to offer. The data provides value far in excess of the item itself. ",
   buttonText: "Get your design now",
-  buttonLink: "https://www.promoplace.com/hostworkspromo/",
+  buttonLink:
+    "https://www.promoplace.com/hostworkspromo/si/365452884/gp1/graphic-package-1",
 };
 
 const referralsData = {
@@ -30,8 +31,7 @@ const referralsData = {
   description:
     "These products are passed along. Nearly two-thirds are given away after the original recipient is finished using the item. They are proven to add value to your guests stay and influence positive referals and reviews.",
   buttonText: "Browse our products",
-  buttonLink:
-    "https://www.promoplace.com/hostworkspromo/si/365452884/gp1/graphic-package-1",
+  buttonLink: "https://www.promoplace.com/hostworkspromo/why-hostworks.htm",
 };
 
 export const ContentBlocks = () => {
