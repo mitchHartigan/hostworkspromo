@@ -13,6 +13,7 @@ const visitorData = {
   buttonLink: "https://www.promoplace.com/hostworkspromo/why-hostworks.htm",
 };
 
+// link to main Graphics Package page once it has been updated by SAGE team.
 const impressionData = {
   imgSrc: "impression.png",
   imgAlt: "Eugene Oasis branded products.",
@@ -21,7 +22,7 @@ const impressionData = {
     "Guest Amenities used for reference are more highly valued. Drive traffic to local event calendars and engage visitors more deeply in what the community has to offer. The data provides value far in excess of the item itself. ",
   buttonText: "Get your design now",
   buttonLink:
-    "https://www.promoplace.com/hostworkspromo/si/365452884/gp1/graphic-package-1",
+    "https://www.promoplace.com/ws/ws.dll/Showroom?DistID=228063&StoreID=218372#5452899",
 };
 
 const referralsData = {
