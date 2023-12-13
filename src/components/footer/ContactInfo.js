@@ -5,7 +5,6 @@ export const ContactInfo = (props) => {
   return (
     <Container>
       <Title>HostWorksPromo</Title>
-      <Subtitle href="tel:9494224199">t. 949.422.4199</Subtitle>
       <Subtitle href="mailto:sales@hostworkspromo.com">
         sales@hostworkspromo.com
       </Subtitle>

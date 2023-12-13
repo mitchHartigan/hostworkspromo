@@ -62,7 +62,6 @@ export const GraphicsPackages = (props) => {
             <Package {...package1Data} />
             <Package {...package2Data} />
             <Package {...package3Data} />
-            <Package {...package4Data} />
           </PackagesContainer>
         </FadeIn>
       </Container>

@@ -32,7 +32,7 @@ const referralsData = {
   description:
     "These products are passed along. Nearly two-thirds are given away after the original recipient is finished using the item. They are proven to add value to your guests stay and influence positive referals and reviews.",
   buttonText: "Browse our products",
-  buttonLink: "https://www.promoplace.com/hostworkspromo/why-hostworks.htm",
+  buttonLink: "https://hostworkspromo.orders.com/",
 };
 
 export const ContentBlocks = () => {

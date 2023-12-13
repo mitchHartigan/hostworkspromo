@@ -17,33 +17,11 @@ export const Navbar = () => {
             <TextLink destination="https://www.promoplace.com/hostworkspromo/why-hostworks.htm">
               Why Hostworks
             </TextLink>
-            <TextLink destination="https://www.promoplace.com/hostworkspromo/artupload.htm">
-              Art and Upload
-            </TextLink>
             <TextLink destination="https://www.promoplace.com/hostworkspromo/contact.htm">
               Contact
             </TextLink>
-            <TextLink destination="https://www.promoplace.com/hostworkspromo/">
-              Products
-            </TextLink>
+            <TextLink destination="/">Blog</TextLink>
           </TextLinkContainer>
-          <SearchBarLink />
-          <IconContainer>
-            <IconLink
-              iconSrc="sign_in.svg"
-              iconAlt="sign in icon"
-              destination="https://www.promoplace.com/hostworkspromo/signin.htm"
-            >
-              Sign In
-            </IconLink>
-            <IconLink
-              iconSrc="cart.svg"
-              iconAlt="cart icon"
-              destination="https://www.promoplace.com/hostworkspromo/cart.htm"
-            >
-              Cart
-            </IconLink>
-          </IconContainer>
         </LinkContainer>
       </Bar>
     </Container>
@@ -94,8 +72,9 @@ const Bar = styled.div`
 `;
 
 const LinkContainer = styled.div`
-  display: grid;
-  grid-template-columns: 60% 21% 19%;
-  width: 100%;
-  margin-top: -3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin-top: 0px;
 `;
