@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Hamburger } from "./Hamburger";
-import { IconLink } from "./IconLink";
-import { SearchBarLink } from "./SearchBarLink";
 
 import { TextLink } from "./TextLink";
 
@@ -14,9 +12,7 @@ export const Navbar = () => {
         <LinkContainer>
           <TextLinkContainer>
             <TextLink destination="/">Home</TextLink>
-            <TextLink destination="https://www.promoplace.com/hostworkspromo/why-hostworks.htm">
-              Why Hostworks
-            </TextLink>
+            <TextLink destination="/why-hostworks">Why Hostworks</TextLink>
             <TextLink destination="https://www.promoplace.com/hostworkspromo/contact.htm">
               Contact
             </TextLink>
@@ -34,16 +30,6 @@ const TextLinkContainer = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
-`;
-
-const IconContainer = styled.div`
-  grid-column: 3 / 4;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 0px 0px 0px 0px;
 `;
 
 const Container = styled.div`
@@ -74,7 +60,8 @@ const Bar = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  width: 50%;
+  width: 50vw;
   margin-top: 0px;
 `;
