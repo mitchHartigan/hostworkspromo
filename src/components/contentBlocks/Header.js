@@ -18,7 +18,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
 
-  padding-top: 60px;
+  padding-top: 80px;
   padding-left: 80px;
 
   @media (max-width: 1450px) {
