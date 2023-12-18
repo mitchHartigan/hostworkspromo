@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { TextLink } from "components/navbar/TextLink";
+
 export function Header() {
   return (
     <Container>
@@ -10,16 +12,23 @@ export function Header() {
         height="auto"
         width="520px"
       />
+      <TextLink header destination="https://hostworkspromo.orders.com">
+        {`Hostworks is designed to get you more booked nights ->`}
+      </TextLink>
     </Container>
   );
 }
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-shadow: 1px 1px 3px 1px lightgray;
 
   padding-top: 80px;
   padding-left: 80px;
+  padding-bottom: 20px;
 
   @media (max-width: 1450px) {
     padding-top: 0px;

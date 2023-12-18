@@ -2,14 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 export const TextLink = (props) => {
-  const { children, destination, menu } = props;
+  const { children, destination, menu, header } = props;
 
   return (
-    <Container menu={menu}>
+    <Container menu={menu} header={header}>
       <Text
         href={destination}
         target={children === "Art and Upload" ? "_blank" : ""}
         menu={menu}
+        header={header}
       >
         {children}
       </Text>
@@ -19,10 +20,12 @@ export const TextLink = (props) => {
 
 const Text = styled.a`
   font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.text.sm};
+  font-size: ${({ theme, header }) => (header ? theme.text.md : theme.text.sm)};
   color: ${(props) => (props.menu ? "black" : "white")};
+  ${({ header }) => header && "color: #0000EE;"}
   cursor: pointer;
   text-decoration: none;
+  margin: 0px 25px 0px 25px;
 `;
 
 const Container = styled.p`

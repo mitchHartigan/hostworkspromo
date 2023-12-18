@@ -73,6 +73,4 @@ const LinkContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  min-width: 25vw;
-  margin-top: 0px;
 `;

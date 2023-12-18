@@ -4,10 +4,9 @@ import styled from "styled-components";
 import { Button } from "../Button";
 import { FadeIn } from "..//FadeIn";
 
-export const HeroCopy = (props) => {
+export const HeroCopy = () => {
   function handleRedirect() {
-    const locationStr =
-      "https://www.promoplace.com/hostworkspromo/why-hostworks.htm";
+    const locationStr = "why-hostworks";
     window.location.href = locationStr;
   }
 
