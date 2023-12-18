@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Hamburger } from "./Hamburger";
 
 import { TextLink } from "./TextLink";
+import { IconLink } from "./IconLink";
 
 export const Navbar = () => {
   return (
@@ -18,6 +19,16 @@ export const Navbar = () => {
             </TextLink>
             <TextLink destination="/">Blog</TextLink>
           </TextLinkContainer>
+        </LinkContainer>
+        <LinkContainer>
+          <TextLink destination="mailto:sales@hostworkspromo.com">
+            sales@hostworkspromo.com
+          </TextLink>
+          <IconLink
+            iconSrc="LinkedIn.png"
+            iconAlt="Linked In Logo"
+            destination="https://www.linkedin.com/in/alexgoldberg/"
+          />
         </LinkContainer>
       </Bar>
     </Container>
@@ -62,6 +73,6 @@ const LinkContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 50vw;
+  min-width: 25vw;
   margin-top: 0px;
 `;
