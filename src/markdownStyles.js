@@ -1,12 +1,25 @@
 import styled from "styled-components";
 
-export const mdHeader = styled.h1`
+export const mdHeader1 = styled.h1`
   color: black;
   font-family: ${(props) => props.theme.font};
-  font-size: 24px;
   font-weight: normal;
   margin-bottom: -5px;
   margin-top: 40px;
+`;
+
+export const mdHeader2 = styled.h2`
+  color: black;
+  font-family: ${(props) => props.theme.font};
+  font-weight: normal;
+  margin-top: 20px;
+`;
+
+export const mdHeader3 = styled.h3`
+  color: black;
+  font-family: ${(props) => props.theme.font};
+  font-weight: normal;
+  margin-top: 10px;
 `;
 
 export const mdParagraph = styled.p`

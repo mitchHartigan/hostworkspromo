@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
 
-import { mdHeader, mdParagraph, mdListItem, mdPre } from "../../markdownStyles";
+import {
+  mdHeader1,
+  mdHeader2,
+  mdHeader3,
+  mdParagraph,
+  mdListItem,
+  mdPre,
+} from "../../markdownStyles";
 
 const markdownOptions = {
   overrides: {
     h1: {
-      component: mdHeader,
+      component: mdHeader1,
+    },
+    h2: {
+      component: mdHeader2,
+    },
+    h3: {
+      component: mdHeader3,
     },
     p: {
       component: mdParagraph,

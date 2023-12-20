@@ -6,11 +6,9 @@ import { TextLink } from "components/navbar/TextLink";
 export function Header() {
   return (
     <Container>
-      <img
+      <HeaderImg
         src="hostworkspromo_banner_logo.jpeg"
         alt="Hostworks Promo Icon"
-        height="auto"
-        width="520px"
       />
       <TextLink header destination="https://hostworkspromo.orders.com">
         {`Hostworks is designed to get you more booked nights ->`}
@@ -33,5 +31,19 @@ const Container = styled.div`
   @media (max-width: 1450px) {
     padding-top: 0px;
     padding-left: 0px;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    padding-top: 80px;
+  }
+`;
+
+const HeaderImg = styled.img`
+  height: auto;
+  width: 520px;
+
+  @media (max-width: 1200px) {
+    width: 350px;
   }
 `;

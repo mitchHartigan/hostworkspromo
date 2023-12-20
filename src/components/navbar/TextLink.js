@@ -22,10 +22,19 @@ const Text = styled.a`
   font-family: ${({ theme }) => theme.font};
   font-size: ${({ theme, header }) => (header ? theme.text.md : theme.text.sm)};
   color: ${(props) => (props.menu ? "black" : "white")};
-  ${({ header }) => header && "color: #0000EE;"}
   cursor: pointer;
   text-decoration: none;
   margin: 0px 25px 0px 25px;
+  ${({ header }) => header && "color: #0000EE;"}
+  ${({ header }) => header && "margin: 10px 0px 0px 15px;"}
+
+  @media(max-width: 1200px) {
+    ${({ header }) => header && "text-align: center;"}
+  }
+
+  @media (max-width: 800px) {
+    ${({ header, theme }) => header && `font-size: ${theme.text.sm}`}
+  }
 `;
 
 const Container = styled.p`
