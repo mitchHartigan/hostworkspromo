@@ -17,7 +17,7 @@ export const Navbar = () => {
             <TextLink destination="https://www.promoplace.com/hostworkspromo/contact.htm">
               Contact
             </TextLink>
-            <TextLink destination="/">Blog</TextLink>
+            <TextLink destination="/blog">Blog</TextLink>
           </TextLinkContainer>
         </LinkContainer>
         <LinkContainer>

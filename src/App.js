@@ -6,6 +6,7 @@ import { globalStyles } from "./globalStyles";
 
 import Homepage from "./pages/Homepage";
 import WhyHostworks from "./pages/WhyHostworks";
+import Blog from "./pages/blog/index";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Route exact path="/" component={Homepage} />
           <Route path="/why-hostworks">
             <WhyHostworks />
+          </Route>
+          <Route path="/blog">
+            <Blog />
           </Route>
         </Switch>
       </Router>

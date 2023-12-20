@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
+import Preview from "./Preview";
+
+import { manifest } from "./posts/postManifest";
+
 export default function Blog() {
   return (
     <Container>
       <Title>Blog</Title>
-      <Preview data={} />
-      <Preview data={} />
+      {manifest.map((blog) => {
+        return <Preview key={blog.title} {...blog} />;
+      })}
     </Container>
   );
 }
