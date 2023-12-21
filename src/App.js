@@ -7,11 +7,12 @@ import { globalStyles } from "./globalStyles";
 import Homepage from "./pages/Homepage";
 import WhyHostworks from "./pages/WhyHostworks";
 import Blog from "./pages/blog/index";
+import history from "./history";
 
 function App() {
   return (
     <ThemeProvider theme={globalStyles}>
-      <Router>
+      <Router history={history}>
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/why-hostworks">

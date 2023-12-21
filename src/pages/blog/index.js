@@ -1,26 +1,32 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useRouteMatch,
+} from "react-router-dom";
 import styled from "styled-components";
 
-import Preview from "./Preview";
-
-import { manifest } from "./posts/postManifest";
+import BlogHub from "./BlogHub";
+import BlogPage from "./BlogPage";
 
 export default function Blog() {
+  const { path } = useRouteMatch();
+
   return (
     <Container>
-      <Title>Blog</Title>
-      {manifest.map((blog) => {
-        return <Preview key={blog.title} {...blog} />;
-      })}
+      <Router>
+        <Switch>
+          <Route exact path={path}>
+            <BlogHub />
+          </Route>
+          <Route path={`${path}/:canonTitle`}>
+            <BlogPage />
+          </Route>
+        </Switch>
+      </Router>
     </Container>
   );
 }
 
-const Title = styled.h1`
-  font-family: ${({ theme }) => theme.font};
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+const Container = styled.div``;

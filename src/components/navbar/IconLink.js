@@ -4,10 +4,6 @@ import styled from "styled-components";
 export const IconLink = (props) => {
   const { destination, iconSrc, iconAlt } = props;
 
-  function redirect(destination) {
-    window.location.href = destination;
-  }
-
   return (
     <Container href={destination}>
       <Icon src={iconSrc} alt={iconAlt} />

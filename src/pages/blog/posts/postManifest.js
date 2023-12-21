@@ -1,6 +1,7 @@
 export const manifest = [
   {
     title: "Perhaps the best ROI of any item",
+    canonTitle: "best-roi-of-any-item",
     mdSrc: "best_roi.md",
     imgSrc: "best_roi.jpeg",
     imgAlt: "Eugene Oasis products",
@@ -9,6 +10,7 @@ export const manifest = [
   },
   {
     title: "Custom Items create better experiences",
+    canonTitle: "custom-items-create-better-experiences",
     mdSrc: "custom_items.md",
     imgSrc: "custom_items.jpeg",
     imgAlt: "Eugene cascades image",
