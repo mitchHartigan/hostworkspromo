@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Redirect } from "react-router-dom";
 
 export default function Preview(props) {
   const { imgSrc, imgAlt, title, previewText, canonTitle, date } = props;
@@ -42,13 +41,14 @@ const DateText = styled.h3`
 
 const Container = styled.a`
   display: flex;
+  border: 1px solid lightgray;
   flex-direction: column;
   align-items: center;
   width: 800px;
   box-shadow: 1px 1px 2px 1px lightgray;
   margin: 20px 0px 20px 0px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;

@@ -5,7 +5,7 @@ export const mdHeader1 = styled.h1`
   font-family: ${(props) => props.theme.font};
   font-weight: normal;
   margin-bottom: -5px;
-  margin-top: 40px;
+  margin-top: 30px;
 `;
 
 export const mdHeader2 = styled.h2`
