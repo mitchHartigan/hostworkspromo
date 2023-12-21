@@ -37,7 +37,7 @@ const CopyContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 50px 10px 50px;
+  padding: 0px 70px 10px 55px;
 
   @media (max-width: 800px) {
     padding: 0px 15px 10px 15px;
