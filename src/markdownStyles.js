@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const mdHeader1 = styled.h1`
   color: black;
-  text-align: center;
   font-family: ${(props) => props.theme.font};
   font-weight: normal;
   margin-bottom: -5px;
@@ -11,7 +10,6 @@ export const mdHeader1 = styled.h1`
 
 export const mdHeader2 = styled.h2`
   color: black;
-  text-align: center;
   font-family: ${(props) => props.theme.font};
   font-weight: normal;
   margin-top: 20px;
@@ -19,7 +17,6 @@ export const mdHeader2 = styled.h2`
 
 export const mdHeader3 = styled.h3`
   color: black;
-  text-align: center;
   font-family: ${(props) => props.theme.font};
   font-weight: normal;
   margin-top: 10px;
@@ -27,7 +24,6 @@ export const mdHeader3 = styled.h3`
 
 export const mdParagraph = styled.p`
   color: black;
-  text-align: center;
   font-family: ${(props) => props.theme.font};
   line-height: 30px;
 `;

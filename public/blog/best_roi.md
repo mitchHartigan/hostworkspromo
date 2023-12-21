@@ -1,4 +1,4 @@
-![Eugene Oasis Products](best_roi.jpeg)
+![Eugene Oasis Products](best_roi.png)
 
 # Perhaps the best ROI of any item
 
