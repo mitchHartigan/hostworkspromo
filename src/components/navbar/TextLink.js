@@ -20,15 +20,16 @@ export const TextLink = (props) => {
 
 const Text = styled.a`
   font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme, header }) => (header ? theme.text.md : theme.text.sm)};
+  font-size: ${({ theme, header }) => (header ? "medium" : theme.text.sm)};
   color: ${(props) => (props.menu ? "black" : "white")};
   cursor: pointer;
   text-decoration: none;
   margin: 0px 25px 0px 25px;
-  ${({ header }) => header && "color: #0000EE;"}
-  ${({ header }) => header && "margin: 10px 0px 0px 15px;"}
+  ${({ theme, header }) => header && `color: ${theme.color}`};
+  ${({ header }) => header && "margin: 0px 0px 0px 10px"};
+  ${({ header }) => header && "font-weight: bold"};
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     ${({ header }) => header && "text-align: center;"}
   }
 

@@ -6,7 +6,8 @@ import { Footer } from "../../components/footer/Footer";
 
 import Preview from "./Preview";
 import { manifest } from "./posts/postManifest";
-import { Header } from "components/contentBlocks/Header";
+import { Header } from "components/header/Header";
+import { Title } from "components/Title";
 
 export default function BlogHub() {
   return (
@@ -14,7 +15,13 @@ export default function BlogHub() {
       <Navbar />
       <Header />
       <Container>
-        <Title>Blog</Title>
+        <Title
+          containerStyles="margin: 20px 0px 10px 0px;"
+          spanWidth="150px"
+          align="center"
+        >
+          Hostworks Blog
+        </Title>
         {manifest.map((blog) => {
           return <Preview key={blog.title} {...blog} />;
         })}
@@ -23,13 +30,6 @@ export default function BlogHub() {
     </Page>
   );
 }
-
-const Title = styled.h1`
-  font-family: ${({ theme }) => theme.font};
-  font-weight: normal;
-  text-align: center;
-  margin: 20px 0px 10px 0px;
-`;
 
 const Page = styled.div`
   display: flex;

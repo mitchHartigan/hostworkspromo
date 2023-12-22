@@ -24,9 +24,9 @@ const Container = styled.div`
   width: 100%;
   box-shadow: 1px 1px 3px 1px lightgray;
 
-  padding-top: 80px;
+  padding-top: 70px;
   padding-left: 80px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 
   @media (max-width: 1450px) {
     padding-top: 0px;
@@ -41,7 +41,7 @@ const Container = styled.div`
 
 const HeaderImg = styled.img`
   height: auto;
-  width: 520px;
+  width: 380px;
 
   @media (max-width: 1200px) {
     width: 350px;

@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 export const Title = (props) => {
-  const { align, spanWidth, children } = props;
+  const { align, containerStyles, textStyles, spanWidth, children } = props;
 
   return (
-    <Container align={align}>
-      <Text>{children}</Text>
+    <Container align={align} containerStyles={containerStyles}>
+      <Text textStyles={textStyles}>{children}</Text>
       <Underline spanWidth={spanWidth} />
     </Container>
   );
@@ -21,6 +21,8 @@ const Container = styled.div`
   @media (max-width: 1450px) {
     align-items: center;
   }
+
+  ${(props) => props.containerStyles};
 `;
 
 const Text = styled.div`
@@ -31,6 +33,8 @@ const Text = styled.div`
   @media (max-width: 1600px) {
     font-size: ${({ theme }) => theme.text.lg};
   }
+
+  ${(props) => props.textStyles};
 `;
 
 const Underline = styled.div`

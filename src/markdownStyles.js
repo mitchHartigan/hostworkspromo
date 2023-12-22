@@ -25,7 +25,8 @@ export const mdHeader3 = styled.h3`
 export const mdParagraph = styled.p`
   color: black;
   font-family: ${(props) => props.theme.font};
-  line-height: 30px;
+  font-size: small;
+  line-height: 28px;
 `;
 
 export const mdListItem = styled.li`
