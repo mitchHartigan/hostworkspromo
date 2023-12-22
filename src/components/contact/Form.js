@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { POST_CONTACT_FORM } from "./API";
 
 import { FormInput } from "./FormInput";
 import { SubmitButton } from "./SubmitButton";
@@ -31,14 +32,40 @@ export default function Form(props) {
     invalidMessage,
     invalidPhone,
     submitted,
+    valid,
     success,
   } = state;
+
+  async function handleEffect() {
+    if (submitted) {
+      console.log("state baby", state);
+      const validForm = checkValidForm(state);
+      setState({ ...state, valid: validForm });
+
+      if (validForm) {
+        // post form
+        const success = await POST_CONTACT_FORM();
+        if (success) setState({ ...state, submitted: false, success });
+      } else {
+        setState({ ...state, submitted: false });
+      }
+    }
+  }
+
+  useEffect(() => {
+    handleEffect();
+  }, [submitted]);
 
   const { interest } = props;
 
   function handleUpdate(evt) {
     const { name, value } = evt.target;
     setState({ ...state, [name]: value });
+  }
+
+  function checkValidForm(state) {
+    const { invalidName, invalidEmail, invalidMessage, invalidPhone } = state;
+    return !(invalidName || invalidEmail || invalidPhone || invalidMessage);
   }
 
   function handleSubmit() {
@@ -48,6 +75,7 @@ export default function Form(props) {
       invalidEmail: email === "",
       invalidPhone: phone === "",
       invalidMessage: message === "" || message === undefined,
+      submitted: true,
     });
   }
 
@@ -57,7 +85,6 @@ export default function Form(props) {
 
   return (
     <Container>
-      <button onClick={() => console.log({ state })}>log state</button>
       <FormInput
         label="Name"
         name="name"
@@ -84,7 +111,7 @@ export default function Form(props) {
         interest={interest}
       />
 
-      <SubmitButton onClick={handleSubmit} submitted={submitted}>
+      <SubmitButton onClick={handleSubmit} submitted={submitted && valid}>
         Send
       </SubmitButton>
     </Container>
