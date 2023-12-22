@@ -28,9 +28,10 @@ const Input = styled.input`
   width: 100%;
   box-sizing: border-box;
   border-radius: 2px;
+  background-color: white;
 
   &:focus {
-    border: 2px solid blue;
+    border: 2px solid ${(props) => props.theme.color};
   }
   ::placeholder {
     color: gray;

@@ -15,7 +15,7 @@ const Button = styled.button`
   min-width: 180px;
   padding: 8px 30px 8px 30px;
   background-color: ${(props) => props.theme.color};
-  color: gray;
+  color: black;
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.xs};
   font-weight: 400;

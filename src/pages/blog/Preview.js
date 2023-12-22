@@ -33,7 +33,7 @@ const PreviewText = styled.p`
   width: 100%;
   font-family: ${({ theme }) => theme.font};
   font-size: 0.9rem;
-  text-align: left;
+  text-align: center;
   margin-top: 10px;
   box-sizing: border-box;
   padding: 0px 20px 0px 20px;
@@ -54,11 +54,12 @@ const Container = styled.a`
   align-items: center;
   width: 50vw;
   box-shadow: 1px 1px 2px 1px lightgray;
-  margin: 20px 0px 20px 0px;
+  margin: 30px 0px 30px 0px;
   box-sizing: border-box;
   padding: 30px 20px 20px 20px;
   border-radius: 5px;
   cursor: pointer;
+  background-color: ${(props) => props.theme.backgroundColor};
   text-decoration: none;
   color: black;
 `;

@@ -41,8 +41,6 @@ export default function Form(props) {
     setState({ [name]: value });
   }
 
-  function validateForm() {}
-
   function handleSubmit() {}
 
   return (
@@ -73,7 +71,7 @@ export default function Form(props) {
         interest={interest}
       />
 
-      <SubmitButton onClick={validateForm} submitted={submitted}>
+      <SubmitButton onClick={handleSubmit} submitted={submitted}>
         Send
       </SubmitButton>
     </Container>
