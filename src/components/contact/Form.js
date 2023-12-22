@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { FormInput } from "./FormInput";
 import { SubmitButton } from "./SubmitButton";
 import { TextArea } from "./TextArea";
+import { Title } from "components/Title";
 
 const initialState = {
   name: "",
@@ -43,8 +44,15 @@ export default function Form(props) {
 
   function handleSubmit() {}
 
+  if (success) {
+    return;
+  }
+
   return (
     <Container>
+      <Title align="center" spanWidth="100px">
+        Contact
+      </Title>
       <FormInput
         label="Name"
         name="name"
