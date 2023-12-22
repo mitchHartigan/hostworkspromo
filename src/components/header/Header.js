@@ -19,14 +19,15 @@ export function Header() {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
   width: 100%;
   box-shadow: 1px 1px 3px 1px lightgray;
 
-  padding-top: 70px;
-  padding-left: 80px;
-  padding-bottom: 5px;
+  padding-top: 65px;
+  padding-left: 43px;
+  padding-bottom: 15px;
 
   @media (max-width: 1450px) {
     padding-top: 0px;
@@ -41,9 +42,9 @@ const Container = styled.div`
 
 const HeaderImg = styled.img`
   height: auto;
-  width: 380px;
+  width: 350px;
 
   @media (max-width: 1200px) {
-    width: 350px;
+    width: 250px;
   }
 `;

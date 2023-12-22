@@ -6,12 +6,7 @@ export const TextLink = (props) => {
 
   return (
     <Container menu={menu} header={header}>
-      <Text
-        href={destination}
-        target={children === "Art and Upload" ? "_blank" : ""}
-        menu={menu}
-        header={header}
-      >
+      <Text href={destination} menu={menu} header={header}>
         {children}
       </Text>
     </Container>
@@ -26,7 +21,7 @@ const Text = styled.a`
   text-decoration: none;
   margin: 0px 25px 0px 25px;
   ${({ theme, header }) => header && `color: ${theme.color}`};
-  ${({ header }) => header && "margin: 0px 0px 0px 10px"};
+  ${({ header }) => header && "margin: 0px 0px 0px 30px"};
   ${({ header }) => header && "font-weight: bold"};
 
   @media (max-width: 1200px) {
@@ -38,7 +33,7 @@ const Text = styled.a`
   }
 `;
 
-const Container = styled.p`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: ${(props) => (props.menu ? "flex-start" : "center")};
