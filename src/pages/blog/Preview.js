@@ -25,13 +25,14 @@ export default function Preview(props) {
 
 const PreviewImage = styled.img`
   height: auto;
-  width: 600px;
+  width: 500px;
+  max-height: 400px;
 `;
 
 const PreviewText = styled.p`
   width: 100%;
   font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.text.sm};
+  font-size: 0.9rem;
   text-align: left;
   margin-top: 10px;
   box-sizing: border-box;

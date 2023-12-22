@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import { manifest } from "./posts/postManifest";
+import { Header } from "components/header/Header";
 import { MarkdownLoader } from "components/markdown/loader";
 
 export default function BlogPage() {
@@ -22,6 +23,7 @@ export default function BlogPage() {
     return (
       <Page>
         <Navbar />
+        <Header />
         <Container>
           <MarkdownLoader path={mdSrc} />
         </Container>

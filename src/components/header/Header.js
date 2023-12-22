@@ -28,6 +28,7 @@ const Container = styled.div`
   padding-top: 65px;
   padding-left: 43px;
   padding-bottom: 15px;
+  box-sizing: border-box;
 
   @media (max-width: 1450px) {
     padding-top: 0px;
