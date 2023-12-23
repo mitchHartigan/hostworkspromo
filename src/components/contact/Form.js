@@ -37,19 +37,18 @@ export default function Form(props) {
   } = state;
 
   async function handleEffect() {
-    if (submitted) {
-      console.log("state baby", state);
-      const validForm = checkValidForm(state);
-      setState({ ...state, valid: validForm });
+    if (!submitted) return;
 
-      if (validForm) {
-        // post form
-        const success = await POST_CONTACT_FORM();
-        if (success) setState({ ...state, submitted: false, success });
-      } else {
-        setState({ ...state, submitted: false });
-      }
+    const validForm = checkValidForm(state);
+    setState({ ...state, valid: validForm });
+
+    if (!validForm) {
+      setState({ ...state, submitted: false });
+      return;
     }
+
+    const success = await POST_CONTACT_FORM();
+    if (success) setState({ ...state, submitted: false, success });
   }
 
   useEffect(() => {

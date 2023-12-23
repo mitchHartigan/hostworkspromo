@@ -23,9 +23,10 @@ const Button = styled.button`
   border: none;
   outline: none;
   border-radius: 3px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
-  &: hover {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
     transform: translate(0px, -1px);
   }
 
