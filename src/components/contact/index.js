@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <Container>
       <Title
-        containerStyles="margin-bottom: 30px;"
+        containerStyles="margin-bottom: 40px;"
         align="center"
         spanWidth="120px"
       >

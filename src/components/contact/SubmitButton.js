@@ -13,6 +13,7 @@ export const SubmitButton = (props) => {
 
 const Button = styled.button`
   min-width: 180px;
+  width: 100%;
   padding: 8px 30px 8px 30px;
   background-color: ${(props) => props.theme.color};
   color: black;

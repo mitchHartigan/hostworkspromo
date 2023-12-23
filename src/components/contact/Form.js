@@ -4,6 +4,7 @@ import { POST_CONTACT_FORM } from "./API";
 
 import { FormInput } from "./FormInput";
 import { SubmitButton } from "./SubmitButton";
+import { Success } from "./Success";
 import { TextArea } from "./TextArea";
 
 const initialState = {
@@ -20,6 +21,7 @@ const initialState = {
 };
 
 export default function Form(props) {
+  const { interest } = props;
   const [state, setState] = useState(initialState);
 
   const {
@@ -36,7 +38,7 @@ export default function Form(props) {
     success,
   } = state;
 
-  async function handleEffect() {
+  async function formEffect() {
     if (!submitted) return;
 
     const validForm = checkValidForm(state);
@@ -47,15 +49,13 @@ export default function Form(props) {
       return;
     }
 
-    const success = await POST_CONTACT_FORM();
+    const success = await POST_CONTACT_FORM(name, email, phone, message);
     if (success) setState({ ...state, submitted: false, success });
   }
 
   useEffect(() => {
-    handleEffect();
+    formEffect();
   }, [submitted]);
-
-  const { interest } = props;
 
   function handleUpdate(evt) {
     const { name, value } = evt.target;
@@ -79,7 +79,11 @@ export default function Form(props) {
   }
 
   if (success) {
-    return <p>Submitted!</p>;
+    return (
+      <Container>
+        <Success text="Thanks for getting in touch!" />
+      </Container>
+    );
   }
 
   return (
@@ -110,9 +114,11 @@ export default function Form(props) {
         interest={interest}
       />
 
-      <SubmitButton onClick={handleSubmit} submitted={submitted && valid}>
-        Send
-      </SubmitButton>
+      <ButtonContainer>
+        <SubmitButton onClick={handleSubmit} submitted={submitted && valid}>
+          Send
+        </SubmitButton>
+      </ButtonContainer>
     </Container>
   );
 }
@@ -133,4 +139,11 @@ const Container = styled.div`
     width: 90%;
     min-width: 10vw;
   }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
