@@ -5,40 +5,10 @@ import { Title } from "../Title";
 import { Package } from "./Package";
 import VisibilitySensor from "react-visibility-sensor";
 import { FadeIn } from "../FadeIn";
-
-const package1Data = {
-  imgSrc: "graphics_1.png",
-  imgAlt: "Eugene Oasis Business cards in circle.",
-  name: "Graphics Package 1",
-  linkTarget:
-    "https://www.promoplace.com/hostworkspromo/si/365452884/gp1/graphic-package-1",
-};
-
-const package2Data = {
-  imgSrc: "graphics_2.png",
-  imgAlt: "Eugene Oasis memo pad and pencil.",
-  name: "Graphics Package 2",
-  linkTarget:
-    "https://www.promoplace.com/hostworkspromo/si/595452897/gp2/graphic-package-2",
-};
-
-const package3Data = {
-  imgSrc: "graphics_3.png",
-  imgAlt: "Eugene Oasis graphics being designed on a laptop.",
-  name: "Graphics Package 3",
-  linkTarget:
-    "https://www.promoplace.com/hostworkspromo/si/395452899/gp3/graphic-package-3",
-};
-
-const package4Data = {
-  imgSrc: "graphics_4.png",
-  imgAlt: "Eugene Oasis graphics displayed on a laptop",
-  name: "Superhost Starter Kit",
-  linkTarget:
-    "https://www.promoplace.com/hostworkspromo/si/525452901/sh5s/super-host-5-star-starter-kit-",
-};
+import { package1, package2, package3 } from "./data";
 
 export const GraphicsPackages = (props) => {
+  const { openModal } = props;
   const [visible, setVisible] = useState();
 
   return (
@@ -59,9 +29,9 @@ export const GraphicsPackages = (props) => {
         </FadeIn>
         <FadeIn delay="400" visible={visible}>
           <PackagesContainer>
-            <Package {...package1Data} />
-            <Package {...package2Data} />
-            <Package {...package3Data} />
+            <Package {...package1} openModal={openModal} />
+            <Package {...package2} openModal={openModal} />
+            <Package {...package3} openModal={openModal} />
           </PackagesContainer>
         </FadeIn>
       </Container>

@@ -7,22 +7,36 @@ import { PrintOnDemand } from "../components/printOnDemand/PrintOnDemand.js";
 import { GraphicsPackages } from "../components/graphicsPackages/GraphicsPackages.js";
 import { Footer } from "../components/footer/Footer";
 import Contact from "components/contact/index.js";
+import Modal from "components/modal/index.js";
 
 export default function Homepage() {
-  const initialState = {
-    interest: null,
-  };
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState("Graphics Package 1");
+  const [interest, setInterest] = useState(""); // Graphics package 1, etc
 
-  const [state, setState] = useState(initialState);
+  function openModal(name) {
+    setModalContent(name);
+    setModalOpen(true);
+  }
+
+  function closeModal() {
+    setModalOpen(false);
+  }
 
   return (
     <>
       <Navbar />
+      <Modal
+        show={modalOpen}
+        content={modalContent}
+        setInterest={setInterest}
+        closeModal={closeModal}
+      />
       <Hero />
       <ContentBlocks />
       <PrintOnDemand />
-      <GraphicsPackages />
-      <Contact />
+      <GraphicsPackages openModal={openModal} />
+      <Contact interest={interest} />
       <Footer />
     </>
   );

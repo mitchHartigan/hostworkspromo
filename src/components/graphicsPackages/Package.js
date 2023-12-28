@@ -2,14 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 export const Package = (props) => {
-  const { imgSrc, imgAlt, name, linkTarget } = props;
-
-  function redirect(destination) {
-    window.location.href = destination;
-  }
+  const { imgSrc, imgAlt, name, openModal } = props;
 
   return (
-    <Container onClick={() => redirect(linkTarget)}>
+    <Container onClick={() => openModal(name)}>
       <Image src={imgSrc} alt={imgAlt} />
       <Text>{name}</Text>
     </Container>
