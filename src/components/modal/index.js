@@ -2,12 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 export default function Modal(props) {
-  const { show, content, setInterest, closeModal } = props;
+  const { show, content, handleOrder, closeModal } = props;
+  const { name, description } = content;
 
   return (
     <Container show={show}>
       <Card>
         <button onClick={closeModal}>X</button>
+        <p>{name}</p>
+        <p>{description}</p>
+        <button onClick={() => handleOrder(name)}>Order Package</button>
       </Card>
     </Container>
   );

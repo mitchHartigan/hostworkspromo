@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 import Form from "./Form";
 
-export default function Contact() {
+export default function Contact(props) {
+  const { interest } = props;
+
   return (
     <Container>
       <Title
@@ -14,7 +16,7 @@ export default function Contact() {
       >
         Contact Us
       </Title>
-      <Form />
+      <Form interest={interest} />
     </Container>
   );
 }

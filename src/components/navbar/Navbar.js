@@ -5,7 +5,9 @@ import { Hamburger } from "./Hamburger";
 import { TextLink } from "./TextLink";
 import { IconLink } from "./IconLink";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+  const { scrollToContact } = props;
+
   return (
     <Container>
       <Hamburger />
@@ -14,9 +16,7 @@ export const Navbar = () => {
           <TextLinkContainer>
             <TextLink destination="/">Home</TextLink>
             <TextLink destination="/why-hostworks">Why Hostworks</TextLink>
-            <TextLink destination="https://www.promoplace.com/hostworkspromo/contact.htm">
-              Contact
-            </TextLink>
+            <button onClick={scrollToContact}>Contact</button>
             <TextLink destination="/blog">Blog</TextLink>
           </TextLinkContainer>
         </LinkContainer>
