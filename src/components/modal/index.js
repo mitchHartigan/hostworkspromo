@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Title } from "components/Title";
+import { Button } from "components/Button";
 
 export default function Modal(props) {
   const { show, content, handleOrder, closeModal } = props;
@@ -10,15 +11,15 @@ export default function Modal(props) {
   return (
     <Container show={show}>
       <Card>
-        <ButtonContainer>
-          <button onClick={closeModal}>X</button>
-        </ButtonContainer>
+        <CloseButtonContainer>
+          <CloseButton onClick={closeModal}>X</CloseButton>
+        </CloseButtonContainer>
         <Image src={imgSrc} alt={imgAlt} />
         <Title align="center" spanWidth="150px">
           {name}
         </Title>
         <Text>{description}</Text>
-        <button onClick={() => handleOrder(name)}>Order Package</button>
+        <Button handleClick={() => handleOrder(name)}>Order Package</Button>
       </Card>
     </Container>
   );
@@ -37,7 +38,14 @@ const Card = styled.div`
   align-items: center;
 `;
 
-const ButtonContainer = styled.div`
+const CloseButton = styled.button`
+  border: none;
+  background-color: transparent;
+  font-size: large;
+  cursor: pointer;
+`;
+
+const CloseButtonContainer = styled.div`
   margin: 0px 20px 0px 0px;
   width: 100%;
   display: flex;
@@ -53,6 +61,7 @@ const Image = styled.img`
 
 const Text = styled.p`
   font-family: ${({ theme }) => theme.font};
+  margin: 20px 0px 20px 0px;
   font-size: medium;
   text-align: center;
 `;

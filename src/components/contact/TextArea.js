@@ -7,7 +7,7 @@ export const TextArea = (props) => {
   let message = "";
 
   if (interest) {
-    message = `Hey! I'm interested in the ${interest}.`;
+    message = `Hey! I'm interested in ${interest}.`;
   }
 
   return (
