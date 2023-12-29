@@ -52,6 +52,7 @@ const Container = styled.div`
   z-index: 999;
 `;
 
+// note
 const ContactButton = styled.button`
   font-family: ${({ theme }) => theme.font};
   font-size: medium;
