@@ -3,23 +3,31 @@ import styled from "styled-components";
 
 import { Title } from "components/Title";
 import { Button } from "components/Button";
+import closeButtonSrc from "./button_close.svg";
 
 export default function Modal(props) {
   const { show, content, handleOrder, closeModal } = props;
-  const { name, description, imgSrc, imgAlt } = content;
+  const { name, description, imgSrc, imgAlt, price } = content;
 
   return (
     <Container show={show}>
       <Card>
         <CloseButtonContainer>
-          <CloseButton onClick={closeModal}>X</CloseButton>
+          <CloseButton
+            src={closeButtonSrc}
+            alt="close buttonb"
+            onClick={closeModal}
+          />
         </CloseButtonContainer>
         <Image src={imgSrc} alt={imgAlt} />
         <Title align="center" spanWidth="150px">
           {name}
         </Title>
-        <Text>{description}</Text>
-        <Button handleClick={() => handleOrder(name)}>Order Package</Button>
+        <Description>{description}</Description>
+        <Price>Price: {price}</Price>
+        <RequestButton onClick={() => handleOrder(name)}>
+          Request {name}
+        </RequestButton>
       </Card>
     </Container>
   );
@@ -27,7 +35,7 @@ export default function Modal(props) {
 
 const Card = styled.div`
   box-sizing: border-box;
-  padding: 20px 10px 40px 10px;
+  padding: 20px 40px 40px 40px;
   width: 45vw;
   background-color: ${({ theme }) => theme.backgroundColor};
   border-radius: 5px;
@@ -38,7 +46,7 @@ const Card = styled.div`
   align-items: center;
 `;
 
-const CloseButton = styled.button`
+const CloseButton = styled.img`
   border: none;
   background-color: transparent;
   font-size: large;
@@ -46,7 +54,7 @@ const CloseButton = styled.button`
 `;
 
 const CloseButtonContainer = styled.div`
-  margin: 0px 20px 0px 0px;
+  margin: 10px 0px 0px 0px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -56,14 +64,37 @@ const CloseButtonContainer = styled.div`
 
 const Image = styled.img`
   height: auto;
-  width: 400px;
+  width: 350px;
 `;
 
-const Text = styled.p`
+const Description = styled.p`
   font-family: ${({ theme }) => theme.font};
   margin: 20px 0px 20px 0px;
   font-size: medium;
   text-align: center;
+`;
+
+const Price = styled(Description)`
+  margin-top: 0px;
+`;
+
+const RequestButton = styled.div`
+  width: 50%;
+  background-color: ${({ theme }) => theme.color};
+  border-radius: 5px;
+  font-family: ${({ theme }) => theme.font};
+  text-align: center;
+  font-size: large;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 0px;
+  cursor: pointer;
+  color: white;
+  transform: translateY(0px);
+  box-shadow: 1px 1px 1px 1px lightgray;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
 `;
 
 const Container = styled.div`
@@ -75,4 +106,5 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+  backdrop-filter: blur(5px);
 `;

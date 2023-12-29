@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Hero from "../components/hero/Hero.js";
 import { Navbar } from "../components/navbar/Navbar.js";
 import { ContentBlocks } from "../components/contentBlocks/index.js";
@@ -17,6 +17,7 @@ import {
 export default function Homepage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(package1);
+  const scrollTargetRef = useRef(null);
   const [interest, setInterest] = useState(""); // Graphics package 1, etc
 
   function getModalContent(name) {
@@ -37,11 +38,14 @@ export default function Homepage() {
   function handleOrder(name) {
     setInterest(name);
     setModalOpen(false);
+    scrollToContact();
   }
 
   function scrollToContact() {
-    const contactForm = document.getElementById("contactScrollTarget");
-    contactForm.scrollIntoView();
+    scrollTargetRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
   }
 
   return (
@@ -57,7 +61,7 @@ export default function Homepage() {
       <ContentBlocks />
       <PrintOnDemand />
       <GraphicsPackages openModal={openModal} />
-      <Contact interest={interest} />
+      <Contact interest={interest} refProp={scrollTargetRef} />
       <Footer />
     </>
   );

@@ -5,10 +5,10 @@ import styled from "styled-components";
 import Form from "./Form";
 
 export default function Contact(props) {
-  const { interest } = props;
+  const { interest, refProp } = props;
 
   return (
-    <Container>
+    <Container ref={refProp}>
       <Title
         containerStyles="margin-bottom: 40px;"
         align="center"

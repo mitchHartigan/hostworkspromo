@@ -4,6 +4,7 @@ import { Hamburger } from "./Hamburger";
 
 import { TextLink } from "./TextLink";
 import { IconLink } from "./IconLink";
+import Contact from "components/contact";
 
 export const Navbar = (props) => {
   const { scrollToContact } = props;
@@ -16,7 +17,7 @@ export const Navbar = (props) => {
           <TextLinkContainer>
             <TextLink destination="/">Home</TextLink>
             <TextLink destination="/why-hostworks">Why Hostworks</TextLink>
-            <button onClick={scrollToContact}>Contact</button>
+            <ContactButton onClick={scrollToContact}>Contact</ContactButton>
             <TextLink destination="/blog">Blog</TextLink>
           </TextLinkContainer>
         </LinkContainer>
@@ -49,6 +50,25 @@ const Container = styled.div`
   justify-content: center;
   width: 100vw;
   z-index: 999;
+`;
+
+const ContactButton = styled.button`
+  font-family: ${({ theme }) => theme.font};
+  font-size: medium;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px 25px 0px 25px;
+  background-color: transparent;
+  border: none;
+
+  @media (max-width: 1200px) {
+    ${({ header }) => header && "text-align: center;"}
+  }
+
+  @media (max-width: 800px) {
+    ${({ header, theme }) => header && `font-size: ${theme.text.sm}`}
+  }
 `;
 
 const Bar = styled.div`
