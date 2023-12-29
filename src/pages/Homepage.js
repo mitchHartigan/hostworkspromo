@@ -21,8 +21,14 @@ export default function Homepage() {
   const [interest, setInterest] = useState(""); // Graphics package 1, etc
 
   useEffect(() => {
-    const hash = document.location.hash;
-    if (hash === "#contact") scrollToContact();
+    // hacky! And probably bad. But it works.
+    // Doing this to wait for the page content to fully load
+    // before scrolling contact into view. Otherwise the scroll
+    // position is off.
+    setTimeout(() => {
+      const hash = document.location.hash;
+      if (hash === "#contact") scrollToContact();
+    }, 100);
   }, []);
 
   function getModalContent(name) {
