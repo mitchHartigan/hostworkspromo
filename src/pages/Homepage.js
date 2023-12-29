@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Hero from "../components/hero/Hero.js";
 import { Navbar } from "../components/navbar/Navbar.js";
 import { ContentBlocks } from "../components/contentBlocks/index.js";
@@ -19,6 +19,11 @@ export default function Homepage() {
   const [modalContent, setModalContent] = useState(package1);
   const scrollTargetRef = useRef(null);
   const [interest, setInterest] = useState(""); // Graphics package 1, etc
+
+  useEffect(() => {
+    const hash = document.location.hash;
+    if (hash === "#contact") scrollToContact();
+  }, []);
 
   function getModalContent(name) {
     if (name === "Graphics Package 1") return package1;
@@ -50,7 +55,7 @@ export default function Homepage() {
 
   return (
     <>
-      <Navbar scrollToContact={scrollToContact} />
+      <Navbar homepage scrollToContact={scrollToContact} />
       <Modal
         show={modalOpen}
         content={modalContent}

@@ -4,10 +4,10 @@ import { Hamburger } from "./Hamburger";
 
 import { TextLink } from "./TextLink";
 import { IconLink } from "./IconLink";
-import Contact from "components/contact";
+import { ContactLink } from "./ContactLink";
 
 export const Navbar = (props) => {
-  const { scrollToContact } = props;
+  const { scrollToContact, homepage } = props;
 
   return (
     <Container>
@@ -17,7 +17,9 @@ export const Navbar = (props) => {
           <TextLinkContainer>
             <TextLink destination="/">Home</TextLink>
             <TextLink destination="/why-hostworks">Why Hostworks</TextLink>
-            <ContactButton onClick={scrollToContact}>Contact</ContactButton>
+            <ContactLink homepage={homepage} handleClick={scrollToContact}>
+              Contact
+            </ContactLink>
             <TextLink destination="/blog">Blog</TextLink>
           </TextLinkContainer>
         </LinkContainer>
