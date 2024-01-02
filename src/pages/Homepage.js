@@ -23,6 +23,11 @@ export default function Homepage() {
   });
   const [interest, setInterest] = useState(""); // Graphics package 1, etc
 
+  function pauseScroll(paused) {
+    if (paused) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+  }
+
   useEffect(() => {
     const hash = document.location.hash;
     if (hash === "#contact") scrollTo("contact", { block: "center" });
@@ -36,15 +41,18 @@ export default function Homepage() {
 
   function openModal(name) {
     setModalContent(getModalContent(name));
+    pauseScroll(true);
     setModalOpen(true);
   }
 
   function closeModal() {
+    pauseScroll(false);
     setModalOpen(false);
   }
 
   function handleOrder(name) {
     setInterest(name);
+    pauseScroll(false);
     setModalOpen(false);
     scrollTo("contact", { behavior: "smooth", block: "center" });
   }

@@ -20,7 +20,11 @@ export default function Modal(props) {
           />
         </CloseButtonContainer>
         <Image src={imgSrc} alt={imgAlt} />
-        <Title align="center" spanWidth="150px">
+        <Title
+          align="center"
+          spanWidth="150px"
+          containerStyles={"margin-top: 10px;"}
+        >
           {name}
         </Title>
         <Description>{description}</Description>
@@ -36,8 +40,8 @@ export default function Modal(props) {
 const Card = styled.div`
   box-sizing: border-box;
   padding: 20px 40px 40px 40px;
-  width: 45vw;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  width: 40vw;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0px 2px 2px 1px lightgray;
   display: flex;
@@ -64,18 +68,24 @@ const CloseButtonContainer = styled.div`
 
 const Image = styled.img`
   height: auto;
-  width: 350px;
+  width: 250px;
 `;
 
 const Description = styled.p`
   font-family: ${({ theme }) => theme.font};
-  margin: 20px 0px 20px 0px;
-  font-size: medium;
-  text-align: center;
+  margin: 25px 0px 20px 0px;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: left;
+
+  box-sizing: border-box;
+  padding: 0px 40px 0px 40px;
 `;
 
 const Price = styled(Description)`
+  font-size: medium;
   margin-top: 0px;
+  margin-bottom: 25px;
 `;
 
 const RequestButton = styled.div`
@@ -84,7 +94,7 @@ const RequestButton = styled.div`
   border-radius: 5px;
   font-family: ${({ theme }) => theme.font};
   text-align: center;
-  font-size: large;
+  font-size: medium;
   box-sizing: border-box;
   padding: 10px 0px 10px 0px;
   cursor: pointer;
