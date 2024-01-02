@@ -33,7 +33,7 @@ export const Navbar = (props) => {
             sales@hostworkspromo.com
           </TextLink>
           <IconLink
-            iconSrc="LinkedIn.png"
+            iconSrc="/LinkedIn.png"
             iconAlt="Linked In Logo"
             destination="https://www.linkedin.com/in/alexgoldberg/"
           />

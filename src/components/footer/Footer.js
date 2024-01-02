@@ -6,7 +6,7 @@ export const Footer = (props) => {
   return (
     <FooterContainer>
       <InfoContainer>
-        <Image src="hostworks_footer.png" />
+        <Image src="/hostworks_footer.png" />
         <ContactInfo />
       </InfoContainer>
       <Bar />

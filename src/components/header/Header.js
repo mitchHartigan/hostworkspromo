@@ -7,7 +7,7 @@ export function Header() {
   return (
     <Container>
       <HeaderImg
-        src="hostworkspromo_banner_logo.jpeg"
+        src="/hostworkspromo_banner_logo.jpeg"
         alt="Hostworks Promo Icon"
       />
       <TextLink header destination="https://hostworkspromo.orders.com">
