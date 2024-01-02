@@ -8,7 +8,7 @@ export default function Preview(props) {
 
   return (
     <Container href={`/blog/${canonTitle}`}>
-      <PreviewImage src={`/${imgSrc}`} alt={imgAlt} />
+      <PreviewImage src={imgSrc} alt={imgAlt} />
       <Title
         containerStyles="margin-top: 20px;"
         textStyles="font-size: large;"

@@ -1,4 +1,4 @@
-![Eugene Cascades Image](custom_items.png)
+![Eugene Cascades Image](/custom_items.png)
 
 # Custom Items create better experiences
 
