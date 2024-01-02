@@ -31,6 +31,7 @@ const Container = styled.div`
 `;
 
 const CopyContainer = styled.div`
+  min-height: 90vh;
   max-width: 100vw;
   box-sizing: border-box;
   display: flex;
