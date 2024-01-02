@@ -17,18 +17,15 @@ import {
 export default function Homepage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(package1);
-  const scrollTargetRef = useRef(null);
+  const contactRef = useRef(null);
+  const [sectionTargets, setSectionTargets] = useState({
+    contact: contactRef,
+  });
   const [interest, setInterest] = useState(""); // Graphics package 1, etc
 
   useEffect(() => {
-    // hacky! And probably bad. But it works.
-    // Doing this to wait for the page content to fully load
-    // before scrolling contact into view. Otherwise the scroll
-    // position is off.
-    setTimeout(() => {
-      const hash = document.location.hash;
-      if (hash === "#contact") scrollToContact();
-    }, 100);
+    const hash = document.location.hash;
+    if (hash === "#contact") scrollTo("contact", { block: "center" });
   }, []);
 
   function getModalContent(name) {
@@ -49,19 +46,16 @@ export default function Homepage() {
   function handleOrder(name) {
     setInterest(name);
     setModalOpen(false);
-    scrollToContact();
+    scrollTo("contact", { behavior: "smooth", block: "center" });
   }
 
-  function scrollToContact() {
-    scrollTargetRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+  function scrollTo(target, options) {
+    sectionTargets[target].current.scrollIntoView(options);
   }
 
   return (
     <>
-      <Navbar homepage scrollToContact={scrollToContact} />
+      <Navbar homepage scrollTo={scrollTo} />
       <Modal
         show={modalOpen}
         content={modalContent}
@@ -72,7 +66,7 @@ export default function Homepage() {
       <ContentBlocks />
       <PrintOnDemand />
       <GraphicsPackages openModal={openModal} />
-      <Contact interest={interest} refProp={scrollTargetRef} />
+      <Contact interest={interest} refProp={contactRef} />
       <Footer />
     </>
   );

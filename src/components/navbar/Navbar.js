@@ -7,7 +7,7 @@ import { IconLink } from "./IconLink";
 import { ContactLink } from "./ContactLink";
 
 export const Navbar = (props) => {
-  const { scrollToContact, homepage } = props;
+  const { scrollTo, homepage } = props;
 
   return (
     <Container>
@@ -17,7 +17,12 @@ export const Navbar = (props) => {
           <TextLinkContainer>
             <TextLink destination="/">Home</TextLink>
             <TextLink destination="/why-hostworks">Why Hostworks</TextLink>
-            <ContactLink homepage={homepage} handleClick={scrollToContact}>
+            <ContactLink
+              homepage={homepage}
+              handleClick={() =>
+                scrollTo("contact", { behavior: "smooth", block: "center" })
+              }
+            >
               Contact
             </ContactLink>
             <TextLink destination="/blog">Blog</TextLink>
