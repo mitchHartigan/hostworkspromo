@@ -8,7 +8,7 @@ import { FadeIn } from "../FadeIn";
 
 export const Summary = (props) => {
   const [visible, setVisible] = useState(false);
-  const { swap, data } = props;
+  const { swap, data, handleClick } = props;
 
   const { imgSrc, imgAlt, title, description, buttonText, buttonLink } = data;
 
@@ -37,9 +37,7 @@ export const Summary = (props) => {
           <Text>{description}</Text>
         </FadeIn>
         <FadeIn delay="325" visible={visible}>
-          <Button handleClick={() => (window.location.href = buttonLink)}>
-            {buttonText}
-          </Button>
+          <Button handleClick={handleClick}>{buttonText}</Button>
         </FadeIn>
       </DescriptionContainer>
     </Container>

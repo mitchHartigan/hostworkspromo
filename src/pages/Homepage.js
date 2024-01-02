@@ -18,20 +18,26 @@ export default function Homepage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(package1);
   const contactRef = useRef(null);
+  const graphicsRef = useState(null);
   const [sectionTargets, setSectionTargets] = useState({
     contact: contactRef,
+    graphics: graphicsRef,
   });
   const [interest, setInterest] = useState(""); // Graphics package 1, etc
+
+  useEffect(() => {
+    const hash = document.location.hash;
+    if (hash === "#contact") scrollTo("contact", { block: "center" });
+  }, []);
 
   function pauseScroll(paused) {
     if (paused) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "unset";
   }
 
-  useEffect(() => {
-    const hash = document.location.hash;
-    if (hash === "#contact") scrollTo("contact", { block: "center" });
-  }, []);
+  function scrollTo(target, options) {
+    sectionTargets[target].current.scrollIntoView(options);
+  }
 
   function getModalContent(name) {
     if (name === "Graphics Package 1") return package1;
@@ -57,10 +63,6 @@ export default function Homepage() {
     scrollTo("contact", { behavior: "smooth", block: "center" });
   }
 
-  function scrollTo(target, options) {
-    sectionTargets[target].current.scrollIntoView(options);
-  }
-
   return (
     <>
       <Navbar homepage scrollTo={scrollTo} />
@@ -71,9 +73,9 @@ export default function Homepage() {
         closeModal={closeModal}
       />
       <Hero />
-      <ContentBlocks />
+      <ContentBlocks scrollTo={scrollTo} />
       <PrintOnDemand />
-      <GraphicsPackages openModal={openModal} />
+      <GraphicsPackages refProp={graphicsRef} openModal={openModal} />
       <Contact interest={interest} refProp={contactRef} />
       <Footer />
     </>

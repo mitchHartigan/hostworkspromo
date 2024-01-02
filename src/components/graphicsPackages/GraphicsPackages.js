@@ -8,7 +8,7 @@ import { FadeIn } from "../FadeIn";
 import { package1, package2, package3 } from "./data";
 
 export const GraphicsPackages = (props) => {
-  const { openModal } = props;
+  const { openModal, refProp } = props;
   const [visible, setVisible] = useState();
 
   return (
@@ -18,7 +18,7 @@ export const GraphicsPackages = (props) => {
         if (visible) setVisible(true);
       }}
     >
-      <Container>
+      <Container ref={refProp}>
         <FadeIn delay="0" visible={visible}>
           <Title align="center" spanWidth="280px">
             Our Graphics Packages

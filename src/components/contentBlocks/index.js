@@ -35,12 +35,30 @@ const referralsData = {
   buttonLink: "https://hostworkspromo.orders.com/",
 };
 
-export const ContentBlocks = () => {
+function redirectTo(link) {
+  window.location.href = link;
+}
+
+export const ContentBlocks = (props) => {
+  const { scrollTo } = props;
+
   return (
     <Container>
-      <Summary data={visitorData} />
-      <Summary data={impressionData} swap />
-      <Summary data={referralsData} />
+      <Summary
+        data={visitorData}
+        handleClick={() => redirectTo(visitorData.buttonLink)}
+      />
+      <Summary
+        data={impressionData}
+        swap
+        handleClick={() =>
+          scrollTo("graphics", { behavior: "smooth", block: "center" })
+        }
+      />
+      <Summary
+        data={referralsData}
+        handleClick={() => redirectTo(referralsData.buttonLink)}
+      />
     </Container>
   );
 };
