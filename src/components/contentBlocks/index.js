@@ -10,7 +10,7 @@ const visitorData = {
   description:
     "Proven solutions for visitor engagement. These items are proven to be more highly valued and kept longer. Use to promote mobile engagement, multiple impressions and referrals over many YEARS.",
   buttonText: "Find out how",
-  buttonLink: "https://www.promoplace.com/hostworkspromo/why-hostworks.htm",
+  buttonLink: "/why-hostworks",
 };
 
 // link to main Graphics Package page once it has been updated by SAGE team.
