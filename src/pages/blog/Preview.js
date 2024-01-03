@@ -10,7 +10,7 @@ export default function Preview(props) {
     <Container href={`/blog/${canonTitle}`}>
       <PreviewImage src={imgSrc} alt={imgAlt} />
       <Title
-        containerStyles="margin-top: 20px;"
+        containerStyles="margin-top: 25px; margin-bottom: 10px;"
         textStyles="font-size: large;"
         spanWidth="200px"
         align="center"
@@ -25,7 +25,7 @@ export default function Preview(props) {
 
 const PreviewImage = styled.img`
   height: auto;
-  width: 500px;
+  width: 450px;
   max-height: 400px;
 `;
 
@@ -36,7 +36,7 @@ const PreviewText = styled.p`
   text-align: center;
   margin-top: 10px;
   box-sizing: border-box;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 40px 0px 40px;
 `;
 
 const DateText = styled.h3`
@@ -52,14 +52,21 @@ const Container = styled.a`
   border: 1px solid lightgray;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
+  width: 40vw;
   box-shadow: 1px 1px 2px 1px lightgray;
   margin: 30px 0px 30px 0px;
   box-sizing: border-box;
-  padding: 30px 20px 20px 20px;
+  padding: 40px 20px 20px 20px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: ${(props) => props.theme.backgroundColor};
+  background-color: white;
   text-decoration: none;
   color: black;
+  transition: transform 75ms ease;
+  transform: translateY(0px);
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: transform 75ms ease;
+  }
 `;

@@ -7,6 +7,7 @@ import { Footer } from "../../components/footer/Footer";
 import { manifest } from "./posts/postManifest";
 import { Header } from "components/header/Header";
 import { MarkdownLoader } from "components/markdown/loader";
+import { BackButton } from "./BackButton";
 
 export default function BlogPage() {
   const { canonTitle } = useParams();
@@ -25,6 +26,7 @@ export default function BlogPage() {
         <Navbar />
         <Header />
         <Container>
+          <BackButton />
           <MarkdownLoader path={mdSrc} />
         </Container>
         <Footer />
@@ -38,12 +40,12 @@ export default function BlogPage() {
 }
 
 const Container = styled.div`
-  padding: 50px 200px 20px 200px;
+  padding: 10px 20vw 20px 55px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   min-height: 100vh;
   width: 100%;
 `;

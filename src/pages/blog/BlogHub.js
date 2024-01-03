@@ -34,6 +34,7 @@ export default function BlogHub() {
 const Page = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.backgroundColor};
 `;
 
 const Container = styled.div`

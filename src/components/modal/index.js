@@ -98,7 +98,6 @@ const RequestButton = styled.div`
   box-sizing: border-box;
   padding: 10px 0px 10px 0px;
   cursor: pointer;
-  color: white;
   transform: translateY(0px);
   box-shadow: 1px 1px 1px 1px lightgray;
 

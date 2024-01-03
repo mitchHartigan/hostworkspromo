@@ -8,6 +8,7 @@ import {
   mdParagraph,
   mdListItem,
   mdPre,
+  mdImg,
 } from "../../markdownStyles";
 
 const markdownOptions = {
@@ -29,6 +30,9 @@ const markdownOptions = {
     },
     pre: {
       component: mdPre,
+    },
+    img: {
+      component: mdImg,
     },
   },
 };

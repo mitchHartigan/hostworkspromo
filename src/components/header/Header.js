@@ -18,6 +18,7 @@ export function Header() {
 }
 
 const Container = styled.div`
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: flex-end;

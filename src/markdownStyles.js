@@ -25,7 +25,7 @@ export const mdHeader3 = styled.h3`
 export const mdParagraph = styled.p`
   color: black;
   font-family: ${(props) => props.theme.font};
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 28px;
 `;
 
@@ -41,4 +41,9 @@ export const mdPre = styled.pre`
   font-family: ${(props) => props.theme.font};
   line-height: 30px;
   margin: 5px 0px 5px 0px;
+`;
+
+export const mdImg = styled.img`
+  width: auto;
+  max-height: 450px;
 `;
