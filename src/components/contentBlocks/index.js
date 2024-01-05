@@ -9,8 +9,8 @@ const visitorData = {
   title: "Get more visitor engagement.",
   description:
     "Proven solutions for visitor engagement. These items are proven to be more highly valued and kept longer. Use to promote mobile engagement, multiple impressions and referrals over many YEARS.",
-  buttonText: "Find out how",
-  buttonLink: "/why-hostworks",
+  buttonText: "Browse our products",
+  buttonLink: "https://hostworkspromo.orders.com/",
 };
 
 // link to main Graphics Package page once it has been updated by SAGE team.
