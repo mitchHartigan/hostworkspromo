@@ -46,17 +46,20 @@ export const ContentBlocks = (props) => {
     <Container>
       <Summary
         data={visitorData}
+        buttonType="redirect"
         handleClick={() => redirectTo(visitorData.buttonLink)}
       />
       <Summary
         data={impressionData}
         swap
+        buttonType="scroll"
         handleClick={() =>
           scrollTo("graphics", { behavior: "smooth", block: "center" })
         }
       />
       <Summary
         data={referralsData}
+        buttonType="redirect"
         handleClick={() => redirectTo(referralsData.buttonLink)}
       />
     </Container>

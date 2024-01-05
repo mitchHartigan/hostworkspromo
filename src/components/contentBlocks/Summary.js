@@ -8,7 +8,7 @@ import { FadeIn } from "../FadeIn";
 
 export const Summary = (props) => {
   const [visible, setVisible] = useState(false);
-  const { swap, data, handleClick } = props;
+  const { swap, data, handleClick, buttonType } = props;
 
   const { imgSrc, imgAlt, title, description, buttonText, buttonLink } = data;
 
@@ -37,12 +37,44 @@ export const Summary = (props) => {
           <Text>{description}</Text>
         </FadeIn>
         <FadeIn delay="325" visible={visible}>
-          <Button handleClick={handleClick}>{buttonText}</Button>
+          {buttonType === "scroll" && (
+            <Button handleClick={handleClick}>{buttonText}</Button>
+          )}
+          {buttonType === "redirect" && (
+            <LinkButton href={buttonLink} target="_blank">
+              {buttonText}
+            </LinkButton>
+          )}
         </FadeIn>
       </DescriptionContainer>
     </Container>
   );
 };
+
+const LinkButton = styled.a`
+  margin-top: 10px;
+  padding: 5px 20px 5px 20px;
+  background-color: white;
+  font-family: ${({ theme }) => theme.font};
+  font-size: ${({ theme }) => theme.text.md};
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 100ms ease;
+
+  &:hover {
+    transform: translate(0px, -2px);
+    transition: transform 100ms ease;
+  }
+
+  @media (max-width: 900px) {
+    font-size: ${({ theme }) => theme.text.sm};
+  }
+`;
 
 const Container = styled.div`
   display: grid;

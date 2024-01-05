@@ -5,7 +5,7 @@ export const IconLink = (props) => {
   const { destination, iconSrc, iconAlt } = props;
 
   return (
-    <Container href={destination}>
+    <Container href={destination} target="_blank">
       <Icon src={iconSrc} alt={iconAlt} />
     </Container>
   );
