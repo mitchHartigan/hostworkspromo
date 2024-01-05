@@ -35,10 +35,8 @@ const Container = styled.div`
     padding-top: 0px;
     padding-left: 0px;
     align-items: center;
-  }
-
-  @media (max-width: 800px) {
-    padding-top: 80px;
+    flex-direction: column;
+    padding-top: 15px;
   }
 `;
 

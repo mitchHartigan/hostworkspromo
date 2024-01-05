@@ -1,9 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { TextLink } from "./TextLink";
+import { ContactLink } from "./ContactLink";
 
 export const Menu = (props) => {
-  const { toggleMenu } = props;
+  const { toggleMenu, scrollTo, homepage } = props;
+
+  function handleContact() {
+    toggleMenu();
+    scrollTo("contact", { behavior: "smooth", block: "center" });
+  }
 
   return (
     <Container>
@@ -18,38 +24,14 @@ export const Menu = (props) => {
         <TextLink menu destination="/">
           Home
         </TextLink>
-        <TextLink
-          menu
-          destination="https://www.promoplace.com/hostworkspromo/why-hostworks.htm"
-        >
+        <TextLink menu destination="/why-hostworks">
           Why Hostworks
         </TextLink>
-        <TextLink
-          menu
-          destination="https://www.promoplace.com/hostworkspromo/artupload.htm"
-        >
-          Art and Upload
-        </TextLink>
-        <TextLink
-          menu
-          destination="https://www.promoplace.com/hostworkspromo/contact.htm"
-        >
+        <ContactLink hamburger homepage={homepage} handleClick={handleContact}>
           Contact
-        </TextLink>
-        <TextLink menu destination="https://www.promoplace.com/hostworkspromo/">
-          Products
-        </TextLink>
-        <TextLink
-          menu
-          destination="https://www.promoplace.com/hostworkspromo/signin.htm"
-        >
-          Sign In
-        </TextLink>
-        <TextLink
-          menu
-          destination="https://www.promoplace.com/hostworkspromo/cart.htm"
-        >
-          Cart
+        </ContactLink>
+        <TextLink menu destination="/blog">
+          Blog
         </TextLink>
       </LinkContainer>
     </Container>

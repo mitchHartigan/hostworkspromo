@@ -2,17 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 export function ContactLink(props) {
-  const { homepage, handleClick } = props;
+  const { homepage, handleClick, hamburger } = props;
 
   if (!homepage) {
-    return <Link href="/#contact">Contact</Link>;
+    return (
+      <Link hamburger={hamburger} href="/#contact">
+        Contact
+      </Link>
+    );
   }
 
   return <ContactButton onClick={handleClick}>Contact</ContactButton>;
 }
 
 const Link = styled.a`
-  color: white;
+  color: ${({ hamburger }) => (hamburger ? "black" : "white")};
   font-family: ${({ theme }) => theme.font};
   font-size: medium;
   cursor: pointer;

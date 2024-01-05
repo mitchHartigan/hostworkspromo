@@ -29,7 +29,11 @@ export class Hamburger extends React.Component {
       );
     } else {
       return (
-        <Menu toggleMenu={this.toggleMenu} homepage={this.props.homepage} />
+        <Menu
+          toggleMenu={this.toggleMenu}
+          homepage={this.props.homepage}
+          scrollTo={this.props.scrollTo}
+        />
       );
     }
   }

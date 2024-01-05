@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { Title } from "components/Title";
-import { Button } from "components/Button";
 import closeButtonSrc from "./button_close.svg";
 
 export default function Modal(props) {

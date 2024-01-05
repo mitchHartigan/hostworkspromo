@@ -18,7 +18,7 @@ export default function Homepage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(package1);
   const contactRef = useRef(null);
-  const graphicsRef = useState(null);
+  const graphicsRef = useRef(null);
   const [sectionTargets, setSectionTargets] = useState({
     contact: contactRef,
     graphics: graphicsRef,
