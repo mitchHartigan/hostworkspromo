@@ -41,13 +41,22 @@ const Card = styled.div`
   box-sizing: border-box;
   padding: 20px 40px 40px 40px;
   width: 40vw;
-  background-color: white;
+  background-color: ${({ theme }) => theme.backgroundColor};
   border-radius: 5px;
   box-shadow: 0px 2px 2px 1px lightgray;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 1200px) {
+    width: 70vw;
+  }
+
+  @media (max-width: 800px) {
+    width: 90vw;
+    padding: 20px 20px 30px 20px;
+  }
 `;
 
 const CloseButton = styled.img`
@@ -69,6 +78,10 @@ const CloseButtonContainer = styled.div`
 const Image = styled.img`
   height: auto;
   width: 250px;
+
+  @media (max-width: 1200px) {
+    width: 150px;
+  }
 `;
 
 const Description = styled.p`
@@ -80,6 +93,14 @@ const Description = styled.p`
 
   box-sizing: border-box;
   padding: 0px 40px 0px 40px;
+
+  @media (max-width: 1200px) {
+    margin: 15px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+  }
 `;
 
 const Price = styled(Description)`
@@ -89,20 +110,26 @@ const Price = styled(Description)`
 `;
 
 const RequestButton = styled.div`
-  width: 50%;
-  background-color: ${({ theme }) => theme.color};
-  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  background-color: white;
   font-family: ${({ theme }) => theme.font};
-  text-align: center;
-  font-size: medium;
-  box-sizing: border-box;
-  padding: 10px 0px 10px 0px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transform: translateY(0px);
-  box-shadow: 1px 1px 1px 1px lightgray;
+  transition: transform 100ms ease;
+  box-sizing: border-box;
+  padding: 10px 20px 10px 20px;
 
   &:hover {
-    transform: translateY(-1px);
+    transform: translate(0px, -2px);
+  }
+  transition: transform 100ms ease;
+
+  @media (max-width: 900px) {
+    font-size: ${({ theme }) => theme.text.sm};
   }
 `;
 

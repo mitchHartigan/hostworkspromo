@@ -40,7 +40,7 @@ const Area = styled.textarea`
     border: 3px solid ${(props) => props.theme.color};
   }
   ::placeholder {
-    color: gray;
+    color: #202020;
     font-size: ${(props) => props.theme.text.xs};
   }
 `;

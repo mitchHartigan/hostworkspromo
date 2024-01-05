@@ -34,7 +34,8 @@ const Input = styled.input`
     border: 2px solid ${(props) => props.theme.color};
   }
   ::placeholder {
-    color: gray;
+    font-family: ${({ theme }) => theme.font};
+    color: #202020;
   }
 
   @media (max-width: 700px) {
