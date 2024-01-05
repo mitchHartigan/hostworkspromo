@@ -4,12 +4,7 @@ import { TextLink } from "./TextLink";
 import { ContactLink } from "./ContactLink";
 
 export const Menu = (props) => {
-  const { toggleMenu, scrollTo, homepage } = props;
-
-  function handleContact() {
-    toggleMenu();
-    scrollTo("contact", { behavior: "smooth", block: "center" });
-  }
+  const { toggleMenu, homepage, handleContact } = props;
 
   return (
     <Container>
@@ -27,7 +22,11 @@ export const Menu = (props) => {
         <TextLink menu destination="/why-hostworks">
           Why Hostworks
         </TextLink>
-        <ContactLink hamburger homepage={homepage} handleClick={handleContact}>
+        <ContactLink
+          hamburger={true}
+          homepage={homepage}
+          handleClick={handleContact}
+        >
           Contact
         </ContactLink>
         <TextLink menu destination="/blog">

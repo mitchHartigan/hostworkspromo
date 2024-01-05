@@ -11,7 +11,7 @@ export const Navbar = (props) => {
 
   return (
     <Container>
-      <Hamburger />
+      <Hamburger scrollTo={scrollTo} homepage={homepage} />
       <Bar>
         <LinkContainer>
           <TextLinkContainer>

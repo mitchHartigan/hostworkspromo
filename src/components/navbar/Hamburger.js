@@ -1,41 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Menu } from "./Menu";
 
-export class Hamburger extends React.Component {
-  constructor(props) {
-    super(props);
+export function Hamburger(props) {
+  const { homepage, scrollTo } = props;
+  const [extend, setExtend] = useState(false);
 
-    this.state = {
-      extend: false,
-    };
+  function toggleMenu() {
+    setExtend(!extend);
   }
 
-  toggleMenu = () => {
-    const { extend } = this.state;
-    this.setState({ extend: !extend });
-  };
+  function handleContact() {
+    toggleMenu();
+    scrollTo("contact", { behavior: "smooth", block: "center" });
+  }
 
-  render() {
-    const { extend } = this.state;
-
-    if (!extend) {
-      return (
-        <Container onClick={this.toggleMenu}>
-          <Line />
-          <Line />
-          <Line />
-        </Container>
-      );
-    } else {
-      return (
-        <Menu
-          toggleMenu={this.toggleMenu}
-          homepage={this.props.homepage}
-          scrollTo={this.props.scrollTo}
-        />
-      );
-    }
+  if (!extend) {
+    return (
+      <Container onClick={toggleMenu}>
+        <Line />
+        <Line />
+        <Line />
+      </Container>
+    );
+  } else {
+    return (
+      <Menu
+        toggleMenu={toggleMenu}
+        homepage={homepage}
+        handleContact={handleContact}
+      />
+    );
   }
 }
 

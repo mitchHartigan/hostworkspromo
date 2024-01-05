@@ -12,7 +12,11 @@ export function ContactLink(props) {
     );
   }
 
-  return <ContactButton onClick={handleClick}>Contact</ContactButton>;
+  return (
+    <ContactButton hamburger={hamburger} onClick={handleClick}>
+      Contact
+    </ContactButton>
+  );
 }
 
 const Link = styled.a`
@@ -27,10 +31,10 @@ const Link = styled.a`
 const ContactButton = styled.button`
   font-family: ${({ theme }) => theme.font};
   font-size: medium;
-  color: white;
+  color: ${({ hamburger }) => (hamburger ? "black" : "white")};
   cursor: pointer;
   text-decoration: none;
-  margin: 0px 25px 0px 25px;
+  margin: 0px 25px 0px 20px;
   background-color: transparent;
   border: none;
 
