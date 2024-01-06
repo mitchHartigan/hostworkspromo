@@ -2,11 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 export const TextLink = (props) => {
-  const { children, destination, menu, header } = props;
+  const { children, destination, menu, header, newTab } = props;
 
   return (
     <Container menu={menu} header={header}>
-      <Text href={destination} menu={menu} header={header}>
+      <Text
+        href={destination}
+        menu={menu}
+        target={newTab ? "_blank" : ""}
+        header={header}
+      >
         {children}
       </Text>
     </Container>

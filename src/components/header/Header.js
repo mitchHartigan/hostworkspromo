@@ -10,7 +10,7 @@ export function Header() {
         src="/hostworkspromo_banner_logo.jpeg"
         alt="Hostworks Promo Icon"
       />
-      <TextLink header destination="https://hostworkspromo.orders.com">
+      <TextLink newTab header destination="https://hostworkspromo.orders.com">
         {`Hostworks is designed to get you more booked nights ->`}
       </TextLink>
     </Container>
