@@ -1,0 +1,76 @@
+Personal Tasks:
+Do CBT worksheets
+
+Backlog:
+Check message from ATO
+Total up what Avery owes me, what she's paid, etc
+Fill out new patient form for wisdom tooth surgery
+
+Work Backlog:
+Deploy and password protect mb-docs site on Shirk Law Netlify
+Deploy AWS Lambda backend(s) on Davids Netlify Acc
+Create billing alerts for my personal AWS acc
+Check details of mb-docs migration, migrate mortgagebanking repo when comfortable
+
+Before we move:
+(done)Renew CA Drivers license online
+(done)Give written notice that we're leaving to the morrow, ask what we need to do before we move out etc
+(done)Call to reserve/Get details about Uhaul
+(done)Figure out where we're going to stop along the way in the Uhaul
+(done)Finalize move date
+(done)Call Uhaul and ask about truck
+(done, pending approval)Sign up for Kaiser Minimum Coverage HMO
+(done)> submit qualifying information.
+
+After we move:
+Update address with post office
+Update address with rental insurance
+
+Planning Notes:
+It took me like a full day to pack up my computer. Should do that at least 4 days before move out day.
+> Can buy anti static bubble wrap at staples. Should use for GPU.
+Need to break down my desk and throw out, that will take some time? Can work from counter or go down to morrow common rooms.
+Need to start on kitchen pack up this weekend. We can eat out or get microwave meals I don't really care. Maybe do another trader joes run.
+
+=============================================
+Work Tasks:
+(done)Create backend for hostworks contact form
+(done)Invoice Alex for Hostworks work
+Ask David how the chart interaction will work from user perspective
+==============================================
+To remember:
+Don't think about work anymore. Need to focus on move first.
+
+To do:
+Cancel Quantum Internet.
+Text christine and say hello/thank you, and give the time we expect to be there. Ask for the address.
+Sign in to Uhaul? Register somehow? Before Friday
+Figure out what I'll be bringing with me in the Uhaul cab.
+Debate adding proton password to vc-container? Might not need to worry about this since we have the recovery code in there.
+> might as well. Salt it the same as the vc container password
+Figure out what stuff will go in the mini
+Figure out a strategy for packing the Uhaul
+Make sure we can drop the keys off at the office on Saturday.
+Go to best buy and purchase car phone mount.
+Buy magic rub erasers, paper towels for cleaning.
+
+Tuesday 6th
+(done)Submit qualifying information to Kaiser tonight
+
+Wednesday 7th
+(done)Submit invoice to Alex
+Migrate any important information off of desktop (this task list + neo4j db keys)
+(done)Go buy anti-static bubble wrap from staples (don't need, but will check at fred meyer)
+Pack up computers and monitors
+Take measurements of desk
+Break down desk + throw away
+Clean out + box up closet items
+
+Thursday 8th
+Fred Meyer/Office Depot run?
+Laundry and dishes
+Pack clothing I want to bring, put rest in contractor bags
+
+Friday 9th
+
+Saturday 10th
